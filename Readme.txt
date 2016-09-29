@@ -1,1 +1,0 @@
-# Abertura do Projeto
