@@ -56,7 +56,6 @@
                 </ul>
               </li>
             </ul>
-
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Contato</a></li>
               <li><a href="#">Telefones Úteis</a></li>
@@ -67,64 +66,66 @@
                 <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
             </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-        </nav>
+          </div><!-- /.container-fluid -->
+        </div>
+      </nav>
+
     </header>
     <!--Div que carrega o mapa no Template HTML -->
     <div id="map"></div>
     <!-- Início do Section com os Estabelecimentos que já estão cadastrados-->
     <section id="singup_section">
-        <div class="container-fluid">
-          <div class="row">
-            <hr>
-            <h2><i class="fa fa-hashtag" aria-hidden="true"></i>EstabelecimentosCadastrados</h2>
-            <hr>
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img src="images/pizza.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3>Pizzaria Cada da Fatia</h3>
-                  <p>Descrição Inicial do Estabelecimento</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img src="images/pizza.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3>Pizzaria Cada da Fatia</h3>
-                  <p>Descrição Inicial do Estabelecimento</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img src="images/pizza.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3>Pizzaria Cada da Fatia</h3>
-                  <p>Descrição Inicial do Estabelecimento</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
-            </div>
-        </div>
-    </section> <!--Fim do Section dos Estabelecimentos Cadastrados-->
-    <!-- Rodapé -->
-    <footer>
       <div class="container-fluid">
-        <h5> © Escrito e Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
-      </div>
-    </footer>
-    <!-- Arquivo Javascript que carrega o Mapa -->
-    <script src="js/maps.js"></script>
-    <!-- Api Javascript do Google Maps -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTGTcBHi7BoxsuZ-HqrB5LO4RBdMFF9SQ&callback=initMap"></script>
-    <!--Dependência JQuery do bootstrap -->
-    <script src="lib/jquery/jquery.js"></script>
-    <!--Arquivo Bootstrap -->
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <div class="row">
+          <hr>
+          <h2><i class="fa fa-hashtag" aria-hidden="true"></i>EstabelecimentosCadastrados</h2>
+          <hr>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> <!--Fim do Section dos Estabelecimentos Cadastrados-->
+      <!-- Rodapé -->
+      <footer>
+        <div class="container-fluid">
+          <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
+        </div>
+      </footer>
+      <!-- Arquivo Javascript que carrega o Mapa -->
+      <script src="js/maps.js"></script>
+      <!-- Api Javascript do Google Maps -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTGTcBHi7BoxsuZ-HqrB5LO4RBdMFF9SQ&callback=initMap"></script>
+      <!--Dependência JQuery do bootstrap -->
+      <script src="lib/jquery/jquery.js"></script>
+      <!--Arquivo Bootstrap -->
+      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>

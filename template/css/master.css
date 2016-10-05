@@ -26,10 +26,15 @@ header #menu{
     border-radius: 10px;
     font-family: Lobster;
     font-size: 20px;
+    color: #fff;
 }
 
 header #menu #navbar-collapse-1 ul.dropdown-menu li{
   font-size: 17px;
+}
+
+header #menu #navbar-collapse-1 ul li{
+  color: rgb(0, 0, 0);
 }
 
 #map{
@@ -45,8 +50,6 @@ header #menu #navbar-collapse-1 ul.dropdown-menu li{
 }
 
 section hr{
-    background-color: #7a7a7a;
-    height: 2px;
     margin-left: 65px;
     margin-right: 65px;
 }
@@ -55,6 +58,11 @@ section h2{
   font-family: Lobster;
   text-align: center;
   color: rgba(99, 93, 93, 0.79);
+}
+
+#box-image{
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 
