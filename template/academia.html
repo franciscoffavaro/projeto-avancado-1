@@ -31,7 +31,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li role="separator" class="divider"></li>
-                  <li><a href="academia.html">Academias</a></li>
+                  <li><a href="#">Academias</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href="#">Bancos</a></li>
                   <li role="separator" class="divider"></li>
@@ -71,20 +71,28 @@
       </nav>
 
     </header>
-    <!--Div que carrega o mapa no Template HTML -->
-    <div id="map"></div>
-    <!-- Início do Section com os Estabelecimentos que já estão cadastrados-->
+
     <section id="singup_section">
       <div class="container-fluid">
         <div class="row">
-          <hr>
-          <h2><i class="fa fa-hashtag" aria-hidden="true"></i>EstabelecimentosCadastrados</h2>
-          <hr>
+
+          <h2>Academias</h2>
+
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-              <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
+              <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
                 <div class="caption">
-                  <h3>Pizzaria Cada da Fatia</h3>
+                  <h3>Academia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="academiadescricao.html" class="btn btn-primary" role="button">Visualizar</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3>Academia</h3>
                   <p>Descrição Inicial do Estabelecimento</p>
                   <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
                 </div>
@@ -92,19 +100,9 @@
             </div>
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
-                <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
+                <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
                 <div class="caption">
-                  <h3>Pizzaria Cada da Fatia</h3>
-                  <p>Descrição Inicial do Estabelecimento</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3>Pizzaria Cada da Fatia</h3>
+                  <h3>Academia</h3>
                   <p>Descrição Inicial do Estabelecimento</p>
                   <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
                 </div>
@@ -119,10 +117,8 @@
           <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
         </div>
       </footer>
-      <!-- Arquivo Javascript que carrega o Mapa -->
-      <script src="js/maps.js"></script>
-      <!-- Api Javascript do Google Maps -->
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTGTcBHi7BoxsuZ-HqrB5LO4RBdMFF9SQ&callback=initMap"></script>
+
+
       <!--Dependência JQuery do bootstrap -->
       <script src="lib/jquery/jquery.js"></script>
       <!--Arquivo Bootstrap -->
