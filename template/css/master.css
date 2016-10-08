@@ -1,4 +1,33 @@
+#comentario{
+  height:60px;
+  padding:30px;
+  background-color:white;}
 
+#caixap2 {
+  margin-left: 120px;
+}
+
+#caixaAvaliacao{
+  margin-left: 200px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+  #caixaAvaliacao2{
+    margin-left: 200px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+#caixaAvaliacao3{
+  margin-left: 400px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+.star-rating {
+  margin-left: 40px;
+  line-height:15px;
+  font-size:2em;
+  cursor:   pointer;
+}
 
 
 
@@ -36,10 +65,7 @@ header #menu{
 header #menu #navbar-collapse-1 ul.dropdown-menu li{
   font-size: 17px;
 }
-header #menu #caixap2 ul.dropdown-menu li{
-  font-size: 17px;
 
-}
 
 header #menu #navbar-collapse-1 ul li{
   color: rgb(0, 0, 0);
@@ -75,11 +101,11 @@ section h2{
   margin-top: 10px;
 }
 
-
 footer{
   color: #999999;
   text-align: center;
   font-family: Yatra One;
+
 }
 
 footer h5{
