@@ -1,12 +1,12 @@
 @@font-face {
   font-family: 'Yatra One'
-  src:url("fonts/yatraone/YatraOne-Regular.ttf");
+  src:url("../fonts/yatraone/YatraOne-Regular.ttf");
   font-size: 1em;
 }
 
 @@font-face {
   font-family: 'Lobster'
-  src:url("fonts/lobster/Lobster-Regular.ttf");
+  src:url("../fonts/lobster/Lobster-Regular.ttf");
   font-size: 1em;
 }
 
@@ -42,7 +42,7 @@ header #menu #navbar-collapse-1 ul li{
   margin-left: 65px;
   margin-right: 65px;
   border-radius: 10px;
-  border: 5;
+
 }
 #singup_section div.container-fluid div.row div.col-sm-6.col-md-4{
   width: 25%;
