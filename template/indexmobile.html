@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Guia RT - O Comércio local a seu alcance!</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default" id="menu">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Guia RT</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Avaliações</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li role="separator" class="divider"></li>
+                  <li><a href="academia.html">Academias</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="bancos.html">Bancos</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Saúde e Medicina</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Hoteis e Pousadas</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Organizações Religiosas</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Beleza</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Bares, Restaurantes e Lanchonetes</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Supermercados e Conveniências</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Casas de Shows e Eventos</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Educação</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Outros</a></li>
+                  <!-- Separador de dropdown <li role="separator" class="divider"></li> -->
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Telefones Úteis</a></li>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Buscar">
+                </div>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </form>
+            </ul>
+          </div><!-- /.container-fluid -->
+        </div>
+      </nav>
+
+    </header>
+    <!--Div que carrega o mapa no Template HTML -->
+    <div id="map"></div>
+    <!-- Início do Section com os Estabelecimentos que já estão cadastrados-->
+    <section id="singup_section">
+      <div class="container-fluid">
+        <div class="row">
+          <hr>
+          <h2><i class="fa fa-hashtag" aria-hidden="true"></i>EstabelecimentosCadastrados</h2>
+          <hr>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> <!--Fim do Section dos Estabelecimentos Cadastrados-->
+      <!-- Rodapé -->
+      <footer>
+        <div class="container-fluid">
+          <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
+        </div>
+      </footer>
+      <!-- Arquivo Javascript que carrega o Mapa -->
+      <script src="js/maps.js"></script>
+      <!-- Api Javascript do Google Maps -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTGTcBHi7BoxsuZ-HqrB5LO4RBdMFF9SQ&callback=initMap"></script>
+      <!--Dependência JQuery do bootstrap -->
+      <script src="lib/jquery/jquery.js"></script>
+      <!--Arquivo Bootstrap -->
+      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
