@@ -68,20 +68,51 @@ section h2{
 
 footer{
   color: #999999;
-  text-align: center;
+  text-align: center;s
   font-family: Yatra One;
 }
 
 footer h5{
   font-size: 12px;
 }
-li a img{
-  height: 25%;
-  width: 25%;
+.row{
 
 }
-td{
-  font-family: Lobster;
-  font-size: 20px;
-  color: #fff;
+.col-md-6{
+
 }
+
+img {
+    float:left;
+    margin:0 20px 10px 0;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+
+  }
+  p{
+
+    font-family: Lobster;
+    font-size: 15px;
+    color:#696969;
+  }
+  #infobox{
+    margin:65px;
+    left: 65px;
+    border-radius: 10px;
+
+    border: 1px solid #E0EEEE;
+
+  }
+  #titulo{
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 10px;
+    font-family: Lobster;
+    font-size: 20px;
+    color:#696969;
+
+    
+    text-align: center;
+  }
