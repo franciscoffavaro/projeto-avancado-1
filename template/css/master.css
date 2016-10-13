@@ -1,13 +1,12 @@
 #comentario{
   height:60px;
   padding:30px;
-  background-color:white;}
+  background-color:white;
+}
 
 #caixap2 {
   margin-left: 120px;
-
 }
-
 
 #caixaAvaliacao{
   margin-left: 200px;
@@ -22,17 +21,42 @@
 #caixaAvaliacao3{
   margin-left: 400px;
   border-radius: 20px;
-  margin-top: 25px;
-}
-.star-rating {
+  margin-top: 25px;}
+
+.estrelas{
   margin-left: 40px;
   line-height:50px;
   font-size:2em;
-  cursor:   pointer;
+  cursor: pointer;
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
 }
 
 
-
+.estrelas2{
+  margin-left: 40px;
+  line-height:50px;
+  font-size:2em;
+  cursor: pointer;
+}
+.estrelas2 input[type=radio] {
+  display: none;
+}
+.estrelas2 label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas2 input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
 @@font-face {
   font-family: 'Yatra One'
   src:url("../fonts/yatraone/YatraOne-Regular.ttf");
