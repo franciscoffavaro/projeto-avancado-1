@@ -10,23 +10,31 @@
   font-size: 1em;
 }
 
+
 html, body{
+  max-width: 1128px;
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 65%;
+  margin-right: 0;
+  padding:  0 2.4em 0 2.4em;
 }
 
 header{
   margin-left: 65px;
   margin-right: 65px;
   margin-top: 20px;
+  width: 65%;
 }
 
 header #menu{
     border-radius: 10px;
     font-family: Lobster;
-    font-size: 20px;
+    font-size: 9px;
     color: #fff;
+    width: 730px;
+    height: 100%;
+
 }
 
 header #menu #navbar-collapse-1 ul.dropdown-menu li{
@@ -38,14 +46,15 @@ header #menu #navbar-collapse-1 ul li{
 }
 
 #map{
-  height: 70%;
+  height: 50%;
   margin-left: 65px;
   margin-right: 65px;
   border-radius: 10px;
+  max-width: 778px;
 
 }
 #singup_section div.container-fluid div.row div.col-sm-6.col-md-4{
-  width: 25%;
+  width: 180px;
   margin-left: 85px;
 }
 
@@ -65,7 +74,12 @@ section h2{
   margin-top: 10px;
 }
 
-
+#h3{
+  font-size: 15px;
+}
+#p{
+  font-size: 10px;
+}
 footer{
   color: #999999;
   text-align: center;
@@ -75,11 +89,6 @@ footer{
 footer h5{
   font-size: 12px;
 }
-li a img{
-  height: 25%;
-  width: 25%;
-
-}
 td{
   font-family: Lobster;
   font-size: 20px;
@@ -88,10 +97,11 @@ td{
 p{
 
   font-family: Lobster;
-  font-size: 15px;
+  font-size: 10px;
   color:#696969;
 }
 #infobox{
+  max-width: 730px;
   margin-top:30px;
   margin-right: 65px;
   margin-left: 65px;
@@ -106,7 +116,7 @@ p{
   margin-left: 65px;
   margin-right: 65px;
   margin-bottom: 20px;
-
+  margin-left: 65px;
   border-radius: 10px;
   font-family: Lobster;
   font-size: 20px;
