@@ -64,7 +64,9 @@ section h2{
   border-radius: 10px;
   margin-top: 10px;
 }
-
+#academiaimagem{
+  height: 500px;
+}
 
 footer{
   color: #999999;

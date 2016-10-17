@@ -73,7 +73,10 @@ section h2{
   border-radius: 10px;
   margin-top: 10px;
 }
-
+#imagemacademia{
+  height: 400px;
+  
+}
 #h3{
   font-size: 15px;
 }
