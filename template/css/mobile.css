@@ -9,7 +9,13 @@
   src:url("../fonts/lobster/Lobster-Regular.ttf");
   font-size: 1em;
 }
-
+#navbar-brand {
+    float: left;
+    height: 172px;
+    padding: 28px 34px;
+    font-size: 32px;
+    line-height: 5.6;
+}
 
 html, body{
   max-width: 1128px;
@@ -30,15 +36,16 @@ header{
 header #menu{
     border-radius: 10px;
     font-family: Lobster;
-    font-size: 9px;
+    font-size: 42px;
     color: #fff;
-    width: 730px;
-    height: 100%;
+    width: 900px;
+    height: 250px;
+    margin-left: -80px;
 
 }
 
 header #menu #navbar-collapse-1 ul.dropdown-menu li{
-  font-size: 17px;
+  font-size: 40px;
 }
 
 header #menu #navbar-collapse-1 ul li{
@@ -57,7 +64,10 @@ header #menu #navbar-collapse-1 ul li{
   width: 180px;
   margin-left: 85px;
 }
-
+#row{
+  margin-left: -80px;
+  margin-right: -80px;
+}
 section hr{
     margin-left: 65px;
     margin-right: 65px;
@@ -74,8 +84,10 @@ section h2{
   margin-top: 10px;
 }
 #imagemacademia{
-  height: 400px;
-  
+  height: 550px;
+  margin-left: 65px;
+
+
 }
 #h3{
   font-size: 15px;
