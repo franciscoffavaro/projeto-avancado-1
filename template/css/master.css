@@ -1,20 +1,33 @@
+#tx{
+  margin-left: 330px;
+  height:100px;
+}
+#botao{
+  margin-top: 10px;
+  margin-left: 440px;
+  height:100px;
+}
+
 #comentario{
-  height:70px;
-  padding:15px;
+  margin-top: -20px;
+  margin-left: 200px;
+  height:100px;
+  padding:57px;
   background-color:white;
 }
 
 
 #caixaAvaliacao{
-  margin-left: 100px;
-  border-radius: 50px;
-  margin-top: 0px;
+
+  margin-left: 450px;
+  border-radius: 250px;
+  margin-top: 90px;
 }
 
 .estrelas{
-  margin-left: 16px;
-  margin-right: -15px;
-  line-height:30px;
+
+  margin-left: 335px;
+  line-height:80px;
   font-size:2em;
   cursor: pointer;
 }
