@@ -53,11 +53,10 @@ header #menu #navbar-collapse-1 ul li{
 }
 
 #map{
-  height: 50%;
-  margin-left: 65px;
-  margin-right: 65px;
+  height: 100%;
+  
   border-radius: 10px;
-  max-width: 778px;
+  max-width: 100%;
 
 }
 #singup_section div.container-fluid div.row div.col-sm-6.col-md-4{
