@@ -1,3 +1,49 @@
+#tx{
+  margin-left: 330px;
+  height:100px;
+}
+#botao{
+  margin-top: 10px;
+  margin-left: 440px;
+  height:100px;
+}
+
+#comentario{
+  margin-top: -20px;
+  margin-left: 200px;
+  height:100px;
+  padding:57px;
+  background-color:white;
+}
+
+
+#caixaAvaliacao{
+
+  margin-left: 450px;
+  border-radius: 250px;
+  margin-top: 90px;
+}
+
+.estrelas{
+
+  margin-left: 335px;
+  line-height:80px;
+  font-size:2em;
+  cursor: pointer;
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+
+
 @@font-face {
   font-family: 'Yatra One'
   src:url("../fonts/yatraone/YatraOne-Regular.ttf");
