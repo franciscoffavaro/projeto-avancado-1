@@ -78,7 +78,9 @@ section h2{
   text-align: center;
   color: rgba(99, 93, 93, 0.79);
 }
-
+#margem{
+  margin-bottom: 80px;
+}
 #box-image{
   border-radius: 10px;
   margin-top: 10px;
@@ -90,13 +92,13 @@ section h2{
 
 }
 #h3{
-  font-size: 15px;
+  font-size: 35px;
 }
 #p{
   font-size: 27px;
 }
 #h2{
-  font-size: 20px;
+  font-size: 40px;
 }
 footer{
   color: #999999;
