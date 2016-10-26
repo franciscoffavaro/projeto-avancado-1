@@ -77,3 +77,8 @@ footer{
 footer h5{
   font-size: 12px;
 }
+#formContato{
+  background:#F8F8F8;
+  color: rgb(99,93,93);
+  margin: 0 3px 0 340px;
+}
