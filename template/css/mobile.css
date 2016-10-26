@@ -75,7 +75,7 @@ section h2{
 }
 #imagemacademia{
   height: 400px;
-  
+
 }
 #h3{
   font-size: 15px;
@@ -91,7 +91,368 @@ footer{
   text-align: center;
   font-family: Yatra One;
 }
+li a img{
+  height: 25%;
+  width: 25%;
 
-footer h5{
-  font-size: 12px;
+}
+td{
+  font-family: Lobster;
+  font-size: 20px;
+  color: #fff;
+}
+p{
+
+  font-family: Lobster;
+  font-size: 25px;
+  color:#696969;
+}
+#infobox{
+  margin-top:30px;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  border: 1px solid #E0EEEE;
+
+}
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 30px;
+  color:#696969;
+  text-align: center;
+}
+.col-md-6{
+  vertical-align: top;
+  width: 450px;    /* largura da imagem */
+ height: 450px;   /*  altura da imagem  */
+ margin-top: 6px;
+
+}
+.col-md-4{
+  vertical-align: top;
+  width: 200px;    /* largura da imagem */
+ height: 200px;   /*  altura da imagem  */
+ margin-top: 15px;
+}
+li a img{
+  height: 25%;
+  width: 25%;
+
+}
+td{
+  font-family: Lobster;
+  font-size: 20px;
+  color: #fff;
+}
+p{
+
+  font-family: Lobster;
+  font-size: 25px;
+  color:#696969;
+}
+#infobox{
+  margin-top:30px;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  border: 1px solid #E0EEEE;
+
+}
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 30px;
+  color:#696969;
+  text-align: center;
+}
+.col-md-6{
+  vertical-align: top;
+  width: 450px;    /* largura da imagem */
+ height: 450px;   /*  altura da imagem  */
+ margin-top: 6px;
+
+}
+.col-md-4{
+  vertical-align: top;
+  width: 200px;    /* largura da imagem */
+ height: 200px;   /*  altura da imagem  */
+ margin-top: 15px;
+}
+li a img{
+  height: 25%;
+  width: 25%;
+
+}
+td{
+  font-family: Lobster;
+  font-size: 20px;
+  color: #fff;
+}
+p{
+
+  font-family: Lobster;
+  font-size: 25px;
+  color:#696969;
+}
+#infobox{
+  margin-top:30px;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  border: 1px solid #E0EEEE;
+
+}
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 30px;
+  color:#696969;
+  text-align: center;
+}
+.col-md-6{
+  vertical-align: top;
+  width: 450px;    /* largura da imagem */
+ height: 450px;   /*  altura da imagem  */
+ margin-top: 6px;
+
+}
+.col-md-4{
+  vertical-align: top;
+  width: 200px;    /* largura da imagem */
+ height: 200px;   /*  altura da imagem  */
+ margin-top: 15px;
+}
+li a img{
+  height: 25%;
+  width: 25%;
+
+}
+td{
+  font-family: Lobster;
+  font-size: 20px;
+  color: #fff;
+}
+p{
+
+  font-family: Lobster;
+  font-size: 25px;
+  color:#696969;
+}
+#infobox{
+  margin-top:30px;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  border: 1px solid #E0EEEE;
+
+}
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 30px;
+  color:#696969;
+  text-align: center;
+}
+.col-md-6{
+  vertical-align: top;
+  width: 450px;    /* largura da imagem */
+ height: 450px;   /*  altura da imagem  */
+ margin-top: 6px;
+
+}
+.col-md-4{
+  vertical-align: top;
+  width: 200px;    /* largura da imagem */
+ height: 200px;   /*  altura da imagem  */
+ margin-top: 15px;
+}
+li a img{
+  height: 25%;
+  width: 25%;
+
+}
+td{
+  font-family: Lobster;
+  font-size: 20px;
+  color: #fff;
+}
+p{
+
+  font-family: Lobster;
+  font-size: 25px;
+  color:#696969;
+}
+#infobox{
+  margin-top:30px;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  border: 1px solid #E0EEEE;
+
+}
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 30px;
+  color:#696969;
+  text-align: center;
+}
+.col-md-6{
+  vertical-align: top;
+  width: 450px;    /* largura da imagem */
+ height: 450px;   /*  altura da imagem  */
+ margin-top: 6px;
+
+}
+.col-md-4{
+  vertical-align: top;
+  width: 200px;    /* largura da imagem */
+ height: 200px;   /*  altura da imagem  */
+ margin-top: 15px;
+}
+li a img{
+  height: 25%;
+  width: 25%;
+
+}
+td{
+  font-family: Lobster;
+  font-size: 20px;
+  color: #fff;
+}
+p{
+
+  font-family: Lobster;
+  font-size: 25px;
+  color:#696969;
+}
+#infobox{
+  margin-top:30px;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  border: 1px solid #E0EEEE;
+
+}
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 30px;
+  color:#696969;
+  text-align: center;
+}
+.col-md-6{
+  vertical-align: top;
+  width: 450px;    /* largura da imagem */
+ height: 450px;   /*  altura da imagem  */
+ margin-top: 6px;
+
+}
+.col-md-4{
+  vertical-align: top;
+  width: 200px;    /* largura da imagem */
+ height: 200px;   /*  altura da imagem  */
+ margin-top: 15px;
+}
+li a img{
+  height: 25%;
+  width: 25%;
+
+}
+td{
+  font-family: Lobster;
+  font-size: 20px;
+  color: #fff;
+}
+p{
+
+  font-family: Lobster;
+  font-size: 25px;
+  color:#696969;
+}
+#infobox{
+  margin-top:30px;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  border: 1px solid #E0EEEE;
+
+}
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 30px;
+  color:#696969;
+  text-align: center;
+}
+.col-md-6{
+  vertical-align: top;
+  width: 450px;    /* largura da imagem */
+ height: 450px;   /*  altura da imagem  */
+ margin-top: 6px;
+
+}
+.col-md-4{
+  vertical-align: top;
+  width: 200px;    /* largura da imagem */
+ height: 200px;   /*  altura da imagem  */
+ margin-top: 15px;
+}
+img {
+    float:left;
+    margin:0 20px 10px 0;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
 }

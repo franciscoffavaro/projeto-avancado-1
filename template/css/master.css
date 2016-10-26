@@ -77,3 +77,57 @@ footer{
 footer h5{
   font-size: 12px;
 }
+li a img{
+  height: 25%;
+  width: 25%;
+
+}
+td{
+  font-family: Lobster;
+  font-size: 20px;
+  color: #fff;
+}
+p{
+
+  font-family: Lobster;
+  font-size: 15px;
+  color:#696969;
+}
+#infobox{
+  margin-top:30px;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  border: 1px solid #E0EEEE;
+
+}
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 20px;
+  color:#696969;
+  text-align: center;
+}
+.col-md-6{
+  vertical-align: top;
+
+}
+#imgTelUteis{
+  height: 30px;
+  width: 30px;
+}
+img {
+    float:left;
+    margin:0 20px 10px 0;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
