@@ -1,16 +1,17 @@
 #tx{
-  margin-left: 330px;
-  height:100px;
+  margin-top: -50px;
+  margin-left: -400px;
+  height:0px;
 }
 #botao{
   margin-top: 10px;
-  margin-left: 440px;
+  margin-left: -300px;
   height:100px;
 }
 
 #comentario{
   margin-top: -20px;
-  margin-left: 200px;
+  margin-left: -400px;
   height:100px;
   padding:57px;
   background-color:white;
@@ -26,7 +27,7 @@
 
 .estrelas{
 
-  margin-left: 335px;
+  margin-left: -350px;
   line-height:80px;
   font-size:2em;
   cursor: pointer;
@@ -42,7 +43,10 @@
   color: #CCC;
 }
 
-
+#texto{
+  margin-left: 5px;
+  margin-right: 130px;
+}
 
 @@font-face {
   font-family: 'Yatra One'
@@ -111,8 +115,8 @@ header #menu #navbar-collapse-1 ul li{
   margin-left: 85px;
 }
 #row{
-  margin-left: -80px;
-  margin-right: -80px;
+  margin-left: -20px;
+  margin-right: 20px;
 }
 section hr{
     margin-left: 65px;
@@ -130,16 +134,17 @@ section h2{
   margin-top: 10px;
 }
 #imagemacademia{
-  height: 550px;
-  margin-left: 65px;
+  height: 300px;
+  margin-left: -550px;
+  margin-top: 400px;
 
 
 }
 #h3{
-  font-size: 15px;
+  font-size: 12px;
 }
 #p{
-  font-size: 10px;
+  font-size: 12px;
 }
 #h2{
   font-size: 20px;
@@ -152,4 +157,6 @@ footer{
 
 footer h5{
   font-size: 12px;
+    margin-left: -620px;
+    margin-top: -50px;
 }
