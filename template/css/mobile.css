@@ -27,14 +27,14 @@
 
 #caixaAvaliacao{
 
-  margin-left: 700px;
+  margin-left: 680px;
   border-radius: 250px;
   margin-top: 90px;
 }
 
 .estrelas{
 
-  margin-left: 400px;
+  margin-left: -325px;
   line-height:120px;
   font-size:2em;
   cursor: pointer;
