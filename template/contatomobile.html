@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8">
     <title>Guia RT - O Comércio local a seu alcance!</title>
     <link rel="stylesheet" href="css/mobile.css">
@@ -20,14 +19,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Guia RT</a>
+            <a id="navbar-brand"class="navbar-brand" href="#">Guia RT</a>
           </div>
-
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="indexmobile.html">Home</a></li>
-              <li><a href="#">Avaliações</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -59,7 +56,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="contatomobile.html">Contato<span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Telefones Úteis</a></li>
+              <li><a href="listaTelefonesUteis.html">Telefones Úteis</a></li>
               <form class="navbar-form navbar-left">
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Buscar">
@@ -70,39 +67,39 @@
           </div><!-- /.container-fluid -->
         </div>
       </nav>
-      <!-- Início do Section contato-->
-      <section id="singup_section">
-        <div class="container-fluid">
-          <div class="row">
-            <hr>
-            <h2 id="h2"><i class="fa fa-hashtag" aria-hidden="true"></i>Fale Conosco</h2>
-            <hr>
-            <div class="col-sm-6">
-              <div class="thumbnail" id="formContato">
-                <form name="formulario" action="http://scripts.redehost.com.br/formmail.aspx" method="post">
-                  <div class="form-group">
-                    <input type=hidden name="destino" value="">
-                    <input type=hidden name="enviado" value="">
-                    <p><b>Nome:</b><br>
-                    <input type=text name="nome" size="35"></p><br>
-                    <p><b>Email:</b><br>
-                    <input type=text name="email" size="35"></p><br>
-                    <p><b>Assunto:</b><br>
-                    <input type=text name="assunto" size="35"></p><br>
-                    <p><b>Mensagem:</b><br>
-                    <textarea name="Mensagem" rows="10" cols="37" wrap="virtual"></textarea></p><br>
-                    <p>
-                      <button type="submit" class="btn btn-success">Enviar</button>
-                      <button type="reset" class="btn btn-warning">Limpar Formulário</button>
-                    </p>
-                  </div>
-                </form>
-              </div>
+    </header>
+    <!-- Início do Section contato-->
+    <section id="singup_section">
+      <div class="container-fluid">
+        <div class="row">
+          <hr>
+          <h2 id="h2"><i class="fa fa-hashtag" aria-hidden="true"></i>Fale Conosco</h2>
+          <hr>
+          <div class="col-sm-12">
+            <div class="thumbnail" id="formContato">
+              <form name="formulario" action="http://scripts.redehost.com.br/formmail.aspx" method="post">
+                <div class="form-group">
+                  <input type=hidden name="destino" value="">
+                  <input type=hidden name="enviado" value="">
+                  <label for="textNome" class="control-label">Nome:</label>
+                  <input id="textNome" class="form-control" placeholder="Informe seu Nome..." type="text"><br>
+                  <label for="textNome" class="control-label">Email:</label>
+                  <input id="textNome" class="form-control" placeholder="Informe seu Email..." type="text"><br>
+                  <label for="textNome" class="control-label">Assunto:</label>
+                  <input id="textNome" class="form-control" placeholder="Qual o assunto?" type="text"><br>
+                  <label for="textNome" class="control-label">Mensagem:</label>
+                  <textarea id="textNome" class="form-control" placeholder="Digite aqui a sua mensagem..." type="text" rows="10" cols="37"></textarea><br>
+                  <p>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                    <button type="reset" class="btn btn-warning">Limpar Formulário</button>
+                  </p>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      </section> <!--Fim do Section contato-->
-    </header>
+      </div>
+    </section> <!--Fim do Section contato-->
     <!-- Rodapé -->
     <footer>
       <div class="container-fluid">
