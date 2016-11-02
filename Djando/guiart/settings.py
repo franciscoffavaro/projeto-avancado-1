@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'guiart.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'guiart',
-        'USER': 'root',
-        'PASSWORD': 'A05011990',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlite3',
     }
 }
 
