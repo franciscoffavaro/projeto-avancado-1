@@ -9,14 +9,14 @@
   src:url("../fonts/lobster/Lobster-Regular.ttf");
   font-size: 1em;
 }
-#navbar-brand { --/*configuração da barra de menu*/
+#navbar-brand { /*configuração da barra de menu*/
     float: none;
     height: 80px;
     padding: 10px 319px;
     font-size: 54px;
     line-height: 1.6;
 }
-#botao-buscar{ --/*Dimensionamento do botão de busca*/
+#botao-buscar{ /*Dimensionamento do botão de busca*/
   margin-left: 470px;
 
 }
@@ -114,13 +114,13 @@ footer h5{
   font-size: 12px;
 }
 
-#formContato{ --/*Formatação do formulário de contato*/
+#formContato{ /*Formatação do formulário de contato*/
   background:#F8F8F8;
   color: rgb(99,93,93);
   margin: 0 -120px 0 10px;
   font-size: 35px;
 }
-#textNome{--/*Formatação do formulário de contato: aumento do campo de texto dos inputs*/
+#textNome{/*Formatação do formulário de contato: aumento do campo de texto dos inputs*/
   font-size: 35px;
   height: 80px;
 }
