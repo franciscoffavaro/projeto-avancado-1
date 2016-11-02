@@ -9,7 +9,17 @@
   src:url("../fonts/lobster/Lobster-Regular.ttf");
   font-size: 1em;
 }
+#navbar-brand { /*configuração da barra de menu*/
+    float: none;
+    height: 80px;
+    padding: 10px 319px;
+    font-size: 54px;
+    line-height: 1.6;
+}
+#botao-buscar{ /*Dimensionamento do botão de busca*/
+  margin-left: 470px;
 
+}
 
 html, body{
   max-width: 1128px;
@@ -18,6 +28,7 @@ html, body{
   height: 65%;
   margin-right: 0;
   padding:  0 2.4em 0 2.4em;
+
 }
 
 header{
@@ -30,15 +41,16 @@ header{
 header #menu{
     border-radius: 10px;
     font-family: Lobster;
-    font-size: 9px;
+    font-size: 55px;
     color: #fff;
-    width: 730px;
-    height: 100%;
+    width: 900px;
+    height: 277px;
+    margin-left: -30px;
 
 }
 
 header #menu #navbar-collapse-1 ul.dropdown-menu li{
-  font-size: 17px;
+  font-size: 42px;
 }
 
 header #menu #navbar-collapse-1 ul li{
@@ -57,7 +69,10 @@ header #menu #navbar-collapse-1 ul li{
   width: 180px;
   margin-left: 85px;
 }
-
+#row{
+  margin-left: -80px;
+  margin-right: -80px;
+}
 section hr{
     margin-left: 65px;
     margin-right: 65px;
@@ -68,23 +83,27 @@ section h2{
   text-align: center;
   color: rgba(99, 93, 93, 0.79);
 }
-
+#margem{
+  margin-bottom: 80px;
+}
 #box-image{
   border-radius: 10px;
   margin-top: 10px;
 }
 #imagemacademia{
-  height: 400px;
-  
+  height: 550px;
+  margin-left: 65px;
+
+
 }
 #h3{
-  font-size: 15px;
+  font-size: 35px;
 }
 #p{
-  font-size: 10px;
+  font-size: 27px;
 }
 #h2{
-  font-size: 20px;
+  font-size: 40px;
 }
 footer{
   color: #999999;
@@ -96,7 +115,13 @@ footer h5{
   font-size: 12px;
 }
 
-#formContato{
+#formContato{ /*Formatação do formulário de contato*/
   background:#F8F8F8;
-  color: rgb(99,93,93); 
+  color: rgb(99,93,93);
+  margin: 0 -120px 0 10px;
+  font-size: 35px;
+}
+#textNome{/*Formatação do formulário de contato: aumento do campo de texto dos inputs*/
+  font-size: 35px;
+  height: 80px;
 }
