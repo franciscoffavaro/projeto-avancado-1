@@ -80,5 +80,9 @@ footer h5{
 #formContato{
   background:#F8F8F8;
   color: rgb(99,93,93);
-  margin: 0 3px 0 340px;
+  margin: 0 3px 0 3px;
+  font-size: 24px;
+}
+#textNome{
+  font-size: 18px;
 }
