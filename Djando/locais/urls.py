@@ -7,4 +7,7 @@ urlpatterns = [
     url(r'^telefones/', views.post_telefonesUteis),
     url(r'^login/', views.post_login),
     url(r'^contato/', views.post_contato),
+    url(r'^academia/', views.post_academia),
+    url(r'^academiadescricao/', views.post_academiadescricao),
+
 ]
