@@ -160,3 +160,26 @@ footer h5{
     margin-left: -620px;
     margin-top: -50px;
 }
+
+.form-group{
+font-size: 40px;
+
+}
+#botao1{
+font-size: 40px;
+margin-left: 230px;
+}
+#botao2{
+font-size: 40px;
+margin-left: 10px;
+}
+
+#caixaTexto{
+margin-top: 0px;
+font-size: 35px;
+width:840px;
+height: 100px
+}
+#texto{
+  margin-top: 30px;
+}
