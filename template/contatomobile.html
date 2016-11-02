@@ -58,10 +58,12 @@
               <li class="active"><a href="contatomobile.html">Contato<span class="sr-only">(current)</span></a></li>
               <li><a href="listaTelefonesUteis.html">Telefones Úteis</a></li>
               <form class="navbar-form navbar-left">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Buscar">
+                <div id="botao-buscar" class="form-group">
+                  <form class="form-search"> --/*Campo de busca modificado*/
+                    <input type="text" class="form-control input-lg input-medium search-query" placeholder="Buscar">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </form>
                 </div>
-                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
             </ul>
           </div><!-- /.container-fluid -->
@@ -88,7 +90,7 @@
                   <label for="textNome" class="control-label">Assunto:</label>
                   <input id="textNome" class="form-control" placeholder="Qual o assunto?" type="text"><br>
                   <label for="textNome" class="control-label">Mensagem:</label>
-                  <textarea id="textNome" class="form-control" placeholder="Digite aqui a sua mensagem..." type="text" rows="10" cols="37"></textarea><br>
+                  <textarea id="textNome" class="form-control" placeholder="Digite aqui a sua mensagem..." type="text" rows="15" cols="37"></textarea><br>
                   <p>
                     <button type="submit" class="btn btn-success">Enviar</button>
                     <button type="reset" class="btn btn-warning">Limpar Formulário</button>
