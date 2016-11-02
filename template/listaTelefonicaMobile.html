@@ -3,11 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Guia RT - O Comércio local a seu alcance!</title>
-
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="images">
   </head>
   <body>
     <header>
@@ -15,28 +13,27 @@
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-             data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a id ="navbar-brand" class="navbar-brand" href="#">Guia RT</a>
+            <a id="navbar-brand"class="navbar-brand" href="#">Guia RT</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="navbar-collapse-1"><!--Lista de Links-->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="indexmobile.html">Home<span class="sr-only">(current)</span></a></li>
               <li><a href="#">Avaliações</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">Academias</a></li>
+                  <li><a href="academiamobile.html">Academias</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">Bancos</a></li>
+                  <li><a href="bancosmobile.html">Bancos</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href="#">Saúde e Medicina</a></li>
                   <li role="separator" class="divider"></li>
@@ -64,100 +61,95 @@
               <li><a href="#">Telefones Úteis</a></li>
               <form class="navbar-form navbar-left">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Buscar">
+                <bt class="box-text"> <input type="text" class="form-control" placeholder="Buscar"></bt>
                 </div>
                 <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
             </ul>
-              </div>
-
           </div><!-- /.container-fluid -->
         </div>
       </nav>
-      </header>
-    <div id = "titulo">Telefones Úteis</div>
 
-    <div id = "infobox" class="container-fluid"><!--Container das imagens-->
-      <div  class="row">
+    </header>
 
-        <table class ="col-md-12"> <!--Criando a tabea-->
+    <section id="singup_section">
+      <div class="container-fluid">
+        <div class="row">
 
-        <tr><!--Linha1-->
-          <td class ="col-md-6"><!--Coluna1-->
-            <div class ="col-md-4"> <img src= "images/samu.png"></div><!--Div de imagem-->
-            <div class ="col-md-8"><!--Div de Texto-->
-            <p></br>
+          <div id= "titulo"><h2>Telefones Úteis</h2></div>
+          <div id="margem"class="col-sm-12 col-md-12">
+            <div class="thumbnail">
+              <img id=box-image src="images/samu.png" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3 id="h3">SAMU</h3>
+                  <p id="p">
+                  Telefone: 192; </br>
+                  Endereço: Rua Assis Chateubraind;</br>
+                  Bairro: Centro.</p>
 
-              SAMU</br>
-              Telefone: 192; </br>
-              Endereço: Rua Assis Chateubraind;</br>
-              Bairro: Centro.
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="thumbnail">
+                <img id=box-image src="images/policia.png" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3 id="h3">Polícia Militar da Paraíba</h3>
+                  <p id="p">
+                    Telefone: 190;</br>
+                    Endereço: Rua Assis Chateaubriand, S/Nº – Centro – Rio Tinto – PB></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="thumbnail">
+                <img id=box-image src="images/prefeitura.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3 id="h3">Prefeitura</h3>
+                  <p id="p">Endereço:   Praça Frederico Lundgren, s/ nº - </br>Bairro: Vila Regina</br>
+                Telefone::(83)3291-2245;</br>
+                E-mail:  pmrtpaif@riotinto.pb.gov.br</br></p>
 
-        </p></div>
-        </td>
-          <td class ="col-md-12" > <!--Coluna2-->
-              <div class ="col-md-4"><img src= "images/policia.png"></div>
-              <div class ="col-md-8">
-              <p></br>Polícia Militar da Paraíba</br>
-                TELEFONE: 190;</br>
-                ENDEREÇO: Rua Assis Chateaubriand, S/Nº – Centro – Rio Tinto – PB</br>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="thumbnail">
+                <img id=box-image src="images/energisa.png" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3 id="h3">Energisa</h3>
+                  <p id="p">
+                    Endereço: Rua Travessa da Mangueira, S/Nº - Centro - Rio Tinto - PB</br>
+                    Telefones: 0800 083 0196  </br>+55 800 083 0196;</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+              <div class="thumbnail">
+                <img id=box-image src="images/cras.png" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3 id="h3">CRAS</h3>
+                  <p id="p">
+                    Telefones: (083) 3291 2222 (083) 98795 5407;</br>
+                    Endereço Eletrônico: pmrt.comunicacao@gmail.com</p>
+                </div>
+              </div>
+            </div>
 
-          </p></div>
-        </td>
-        </tr>
-
-        <tr><!--Linha2-->
-          <td class ="col-md-6" ><!--Coluna1-->
-            <div class ="col-md-4"><img src= "images/cras.png"></div>
-            <div class ="col-md-8">
-            <p></br></br> Assistência Social</br>
-              TELEFONES: (083) 3291 2222 (083) 98795 5407;</br>
-              ENDEREÇO ELETRÔNICO: pmrt.comunicacao@gmail.com
-            </p></div>
-        </td>
-          <td class ="col-md-6" ><!--Coluna2-->
-              <div class ="col-md-4"><img src= "images/cagepa.png"></div>
-              <div class ="col-md-8">
-              <p></br></br> Cagepa</br>
-                      Endereço: Rua Othon Barreto, S/Nº -Mamanguape;
-                      TELEFONE:(83) 3231-8099;</br>
-                      ATENDIMENTO 24Hrs: 115;
-          </p></div>
-        </td>
-        </tr>
-
-        <tr><!--Linha3-->
-          <td class ="col-md-6"><!--Coluna1-->
-            <div class ="col-md-4"> <img src= "images/energisa.png"></div>
-            <div class ="col-md-8">
-            <p></br>Energisa</br>
-              ENDEREÇO: Rua Travessa da Mangueira, S/Nº - Centro - Rio Tinto - PB</br>
-            TELEFONES: 0800 083 0196  +55 800 083 0196 ;</br>
-
-        </p></div>
-        </td>
-          <td class ="col-md-6"><!--Coluna2-->
-              <div class ="col-md-4"><img src= "images/prefeitura.jpg"></div>
-              <div class ="col-md-8">
-              <p></br>ENDEREÇO: Endereço:   Praça Frederico Lundgren, s/ nº - Bairro: Vila Regina</br>
-            TELEFONES:(83)3291-2245;</br>
-            E-mail:  pmrtpaif@riotinto.pb.gov.br</br>
-
-
-          </p></div>
-        </td>
-        </tr>
-
-
-      </table><!--Fim da tabela-->
+          </div>
+        </div>
+      </section> <!--Fim do Section dos Estabelecimentos Cadastrados-->
+      <!-- Rodapé -->
+      <footer>
+        <div class="container-fluid">
+          <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
+        </div>
+      </footer>
 
 
-    </div>
-  </div><!-- /.container-fluid --> -->
-  <footer>
-    <div class="container-fluid">
-      <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
-    </div>
-  </footer>
-</body>
+      <!--Dependência JQuery do bootstrap -->
+      <script src="lib/jquery/jquery.js"></script>
+      <!--Arquivo Bootstrap -->
+      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    </body>
 </html>

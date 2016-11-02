@@ -30,19 +30,24 @@ header{
 header #menu{
     border-radius: 10px;
     font-family: Lobster;
-    font-size: 35px;
+    font-size: 50px;
     color: #fff;
-    width: 730px;
+    width: 775px;
     height: 100%;
 
 }
 
 header #menu #navbar-collapse-1 ul.dropdown-menu li{
-  font-size: 17px;
+  font-size: 50px;
 }
 
 header #menu #navbar-collapse-1 ul li{
   color: rgb(0, 0, 0);
+  text-align: center;
+
+}
+a{
+  text-align: center;
 }
 
 #map{
@@ -78,89 +83,52 @@ section h2{
 
 }
 #h3{
-  font-size: 15px;
+  font-size: 50px;
+  font-family: Lobster;
+  color: #696969;
+  font-family: Lobster;
 }
-#p{
-  font-size: 10px;
+#p{ /*Descrição*/
+  font-size: 50px;
+  font-family: Lobster;
+  color: rgba(99, 93, 93, 0.79);
+  font-family: Lobster;
+
 }
 #h2{
   font-size: 20px;
+  color: rgba(99, 93, 93, 0.79);
 }
 footer{
   color: #999999;
   text-align: center;
   font-family: Yatra One;
 }
-li a img{
-  height: 25%;
-  width: 25%;
 
-}
-
-#infobox{/*container das imagens*/
-  margin-top:30px;
-  margin-right: 65px;
-  margin-left: 65px;
-  margin-bottom: 20px;
-
-  border-radius: 10px;
-  border: 1px solid #E0EEEE;
-
-}
-#titulo{/*div do título*/
-  margin-top: 30px;
-  margin-left: 65px;
-  margin-right: 65px;
-  margin-bottom: 20px;
-
-  border-radius: 10px;
-  font-family: Lobster;
-  font-size: 35px;
-  color:#696969;
-  text-align: center;
-}
-.col-md-6{/*div do texto*/
-  vertical-align: top;
-  width: 450px;    /* largura da imagem */
- height: 450px;   /*  altura da imagem  */
- margin-top: 6px;
- color: rgb(0, 0, 0);
-
-}
-.col-md-4{/*div das imagens*/
-  vertical-align: top;
-  width: 200px;    /* largura da imagem */
- height: 200px;   /*  altura da imagem  */
- margin-top: 15px;
-}
-/*li a img{
-  height: 25%;
-  width: 25%;
-
-}*/
-td{/*coluna das imagens*/
-  font-family: Lobster;
-  font-size: 20px;
-  color: #fff;
-}
-p{/*texto*/
-
-  font-family: Lobster;
-  font-size: 25px;
-  color:#696969;
-}
 img {/*Imagens*/
     float:left;
     margin:0 20px 10px 0;
-    max-width:200px;
-    max-height:150px;
+    max-width:500px;
+    max-height:500px;
     width: 1000px;
     height: 1000px;
 }
 #navbar-brand {
-    float: left;
-    height: 172px;
-    padding: 28px 34px;
-    font-size: 32px;
-    line-height: 5.6;
+  float: left;
+  height: 200px;
+  /* padding: 28px 34px; */
+  font-size: 50px;
+  line-height: 5.6;
+  margin-left: 60mm;
+  }
+  #titulo h2{/**/
+    font-family: Lobster;
+    font-size: 50px;
+    height: 100px;
+
+  }
+  .bt{/*Caixa de busca*/
+    min-width:300px;
+    width: 200px;
+    height: 60mm;
   }
