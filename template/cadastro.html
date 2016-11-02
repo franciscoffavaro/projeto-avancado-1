@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Guia RT - O Comércio local a seu alcance!</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default" id="menu">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Guia RT</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li role="separator" class="divider"></li>
+                  <li><a href="academia.html">Academias</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="bancos.html">Bancos</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Saúde e Medicina</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Hoteis e Pousadas</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Organizações Religiosas</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Beleza</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Bares, Restaurantes e Lanchonetes</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Supermercados e Conveniências</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Casas de Shows e Eventos</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Educação</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Outros</a></li>
+                  <!-- Separador de dropdown <li role="separator" class="divider"></li> -->
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Telefones Úteis</a></li>
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Buscar">
+                </div>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+<!-- /.Fim do cabeçalho -->
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- formulario cadastro -->
+<legend>Cadastro de Estabelecimentos</legend>
+
+<!-- Autor da postagem de estabelecimentos-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Autor">Autor</label>
+  <div class="col-md-4">
+  <input id="Autor" name="Autor" type="text" placeholder="Digite Aqui" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Adicionar titulo do texto-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Titulo">Titulo do Estabelecimento</label>
+  <div class="col-md-4">
+  <input id="Titulo" name="Titulo" type="text" placeholder="" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Adicionar Descrição do texto-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="descricaodoestabelecimento">Descricao</label>
+  <div class="col-md-5">
+  <input id="descricaodoestabelecimento" name="descricaodoestabelecimento" type="text" placeholder="" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- adicionar Latitude-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Localização">Latitude</label>
+  <div class="col-md-4">
+  <input id="Localização" name="Localização" type="text" placeholder="" class="form-control input-md">
+
+  </div>
+</div>
+
+<!--adicionar Longitude-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Localizacao">Longitude</label>
+  <div class="col-md-4">
+  <input id="Localizacao" name="Localizacao" type="text" placeholder="" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Selecionar categoria a ser inserida -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Categorias">Categorias</label>
+  <div class="col-md-4">
+    <select id="Categorias" name="Categorias" class="form-control">
+      <option value="1">Academias</option>
+      <option value="2">Bancos</option>
+      <option value="3">Saude e Medicina</option>
+      <option value="4">Hoteis e Pousadas</option>
+      <option value="5">Organizações Religiosas</option>
+      <option value="6">Beleza</option>
+      <option value="7">Bares, Restaurantes e Lanchonetes</option>
+      <option value="8">Supermercados e Conveniências</option>
+      <option value="9">Casas de Shows e Eventos</option>
+      <option value="10">Educação</option>
+      <option value="11">Outros</option>
+    </select>
+  </div>
+</div>
+
+<!-- Fanexar imagem -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="ImagemPrincipal">Imagem Principal</label>
+  <div class="col-md-4">
+    <input id="ImagemPrincipal" name="ImagemPrincipal" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- botão de confirmar ou cancelar cadastro -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Salvar"></label>
+  <div class="col-md-8">
+    <button id="Salvar" name="Salvar" class="btn btn-success">Salvar</button>
+    <button id="Cancelar" name="Cancelar" class="btn btn-danger">Cancelar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Rodapé -->
+      <footer>
+        <div class="container-fluid">
+          <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
+        </div>
+      </footer>
+
+
+      <!--Dependência JQuery do bootstrap -->
+      <script src="lib/jquery/jquery.js"></script>
+      <!--Arquivo Bootstrap -->
+      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
