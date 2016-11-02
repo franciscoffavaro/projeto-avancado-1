@@ -9,12 +9,16 @@
   src:url("../fonts/lobster/Lobster-Regular.ttf");
   font-size: 1em;
 }
-#navbar-brand {
-    float: left;
-    height: 172px;
-    padding: 28px 34px;
-    font-size: 32px;
-    line-height: 5.6;
+#navbar-brand { --/*configuração da barra de menu*/
+    float: none;
+    height: 80px;
+    padding: 10px 319px;
+    font-size: 54px;
+    line-height: 1.6;
+}
+#botao-buscar{ --/*Dimensionamento do botão de busca*/
+  margin-left: 470px;
+
 }
 
 html, body{
@@ -24,6 +28,7 @@ html, body{
   height: 65%;
   margin-right: 0;
   padding:  0 2.4em 0 2.4em;
+
 }
 
 header{
@@ -36,11 +41,11 @@ header{
 header #menu{
     border-radius: 10px;
     font-family: Lobster;
-    font-size: 42px;
+    font-size: 55px;
     color: #fff;
     width: 900px;
-    height: 250px;
-    margin-left: -80px;
+    height: 277px;
+    margin-left: -30px;
 
 }
 
@@ -108,7 +113,14 @@ footer{
 footer h5{
   font-size: 12px;
 }
-#formContato{
+
+#formContato{ --/*Formatação do formulário de contato*/
   background:#F8F8F8;
   color: rgb(99,93,93);
+  margin: 0 -120px 0 10px;
+  font-size: 35px;
+}
+#textNome{--/*Formatação do formulário de contato: aumento do campo de texto dos inputs*/
+  font-size: 35px;
+  height: 80px;
 }
