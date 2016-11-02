@@ -105,7 +105,7 @@ footer{
   font-family: Yatra One;
 }
 
-img {/*Imagens*/
+img {/*Imagens de telefones úteis*/
     float:left;
     margin:0 20px 10px 0;
     max-width:500px;
@@ -121,13 +121,13 @@ img {/*Imagens*/
   line-height: 5.6;
   margin-left: 60mm;
   }
-  #titulo h2{/**/
+  #titulo h2{/*titulo de telefones úteis*/
     font-family: Lobster;
     font-size: 50px;
     height: 100px;
 
   }
-  .bt{/*Caixa de busca*/
+  .bt{/*Caixa de busca de telefones úteis*/
     min-width:300px;
     width: 200px;
     height: 60mm;
