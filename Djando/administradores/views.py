@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.shortcuts import render #modulo render para renderização e apresentação de artefato html no momento da requisição.
+from django.contrib.auth import authenticate, login #inclui os modulos para autenticação e criação de login do usuário
 from django.http import HttpResponseRedirect # Funcao para redirecionar o usuario
 from django.contrib.auth.forms import UserCreationForm # Formulario de criacao de usuarios
 from django.contrib.auth.forms import AuthenticationForm # Formulario de autenticacao de usuarios
-from django.contrib.auth.decorators import login_required
-from .models import *
-from administradores.forms import *
+from django.contrib.auth.decorators import login_required #torna obrigatoria a necessidade de login para acesso a determinada página.
+from .models import * #Importa tudo em models
+from administradores.forms import * #importa tudo em administradores.forms.
 
 #Função que autentica o usuário na tela de Login do Sistema
 def user_login(request):
@@ -28,7 +28,7 @@ def user_login(request):
 
     return render(request, 'administradores/login.html', {'form':form})
 
-
+@login_required(login_url='/login/')
 def user_new(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
@@ -49,7 +49,7 @@ def user_new(request):
     return render(request, 'administradores/newuser.html', {'form':form})
 
 #Adição de um novo Local
-@login_required
+@login_required(login_url='/login/')
 def local_new(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
@@ -60,7 +60,7 @@ def local_new(request):
     return render(request, 'administradores/novo_local_restrict.html', {'form':form})
 
 #Ecição de um local usando como parâmetro seu ID
-@login_required
+@login_required(login_url='/login/')
 def local_edit(request, locais_post_id):
     local = Post.objects.get(pk=locais_post_id)
     if request.method == 'POST':
@@ -73,13 +73,13 @@ def local_edit(request, locais_post_id):
     return render(request, 'administradores/editar_local.html', {'form':form, 'local_id': locais_post_id})
 
 #Remoção de um Local do Sistema usando como parâmetro seu ID.
-@login_required
+@login_required(login_url='/login/')
 def local_delete(request, locais_post_id):
     local = Post.objects.get(pk=locais_post_id)
     local.delete()
     return HttpResponseRedirect('/local/index/')
 
-@login_required
+@login_required(login_url='/login/')
 def local_index(request):
     locais = Post.objects.all()
     users = UserAdmin.objects.all()
