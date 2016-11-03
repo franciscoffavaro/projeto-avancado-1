@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
+from django.http import HttpResponseRedirect # Funcao para redirecionar o usuario
+from django.contrib.auth.forms import UserCreationForm # Formulario de criacao de usuarios
+from django.contrib.auth.forms import AuthenticationForm # Formulario de autenticacao de usuarios
 from .models import Post
 
 def post_index(request):
@@ -12,10 +15,11 @@ def post_avaliacoes(request):
 def post_telefonesUteis(request):
     return render(request, 'locais/listaTelefonesUteis.html', {})
 
-def post_login(request):
-    return render(request, 'locais/telaLogin.html', {})
-
 def post_contato(request):
     return render(request, 'locais/contato.html', {})
+
+def post_categorias(request):
+    locais=Post.objects.all()
+    return render (request, 'locais/lista_locais.html', {'locais':locais})
 
 # Create your views here.

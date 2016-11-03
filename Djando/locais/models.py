@@ -33,3 +33,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.titulo_local
+
+class Avaliacao(models.Model):
+    comentario = models.CharField(max_length=500)
+    valor_avaliacao = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.comentario

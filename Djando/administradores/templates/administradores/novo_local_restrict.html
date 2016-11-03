@@ -1,0 +1,16 @@
+{% extends "../base_restrict.html" %}
+{% load staticfiles %}
+
+
+    {% block section %}
+      <section>
+        <form action="{% url 'new_local' %}" method="POST">
+          {% csrf_token %}
+
+          {{ form }}
+          <input type="submit" value="Criar">
+
+        </form>
+      </section>
+
+    {% endblock %}

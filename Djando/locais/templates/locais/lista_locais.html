@@ -1,0 +1,28 @@
+{% extends "../base.html" %}
+{% load staticfiles %}
+
+
+    {% block section %}
+
+    <section id="singup_section">
+      <div class="container-fluid">
+        <div class="row">
+          <h2>{{ local.categorias }}</h2>
+          {% for local in locais %}
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3>{{ local.titulo_local }}</h3>
+                  <p>{{ local.titulo_local }}</p>
+                  <p><a class="btn btn-primary" role="button">Visualizar</a></p>
+                  <p><a href="{% url 'edit_local' local.id %}" class="btn btn-primary" role="button">Editar</a></p>
+                  <p><a href="{% url 'delete_local' local.id %}" class="btn btn-primary" role="button">Deletar</a></p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section> <!--Fim do Section dos Estabelecimentos Cadastrados-->
+    {% endblock %}
