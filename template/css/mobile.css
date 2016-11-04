@@ -1,36 +1,44 @@
 #tx{
-  margin-top: -50px;
-  margin-left: -400px;
-  height:0px;
+  margin-top: -250px;
+  margin-left: -300px;
+  height:20px;
+  font-size: 29px;
+
 }
 #botao{
-  margin-top: 10px;
-  margin-left: -300px;
-  height:100px;
+  margin-top: 25px;
+  margin-left: -50px;
+  height:200px;
+}
+#botaoE{
+  font-size: 40px;
+  margin-top: -20px;
+  margin-left: -50px;
+  height:70px;
+
 }
 
 #comentario{
-  margin-top: -20px;
-  margin-left: -400px;
-  height:100px;
-  padding:57px;
-  background-color:white;
+
+  margin-left: -185px;
+
 }
 
 
 #caixaAvaliacao{
 
-  margin-left: 450px;
-  border-radius: 250px;
-  margin-top: 90px;
+  margin-left: 400px;
+  border-radius: 150px;
+  margin-top: 300px;
 }
 
 .estrelas{
 
-  margin-left: -350px;
+  margin-left: -80px;
   line-height:80px;
   font-size:2em;
   cursor: pointer;
+
 }
 .estrelas input[type=radio] {
   display: none;
@@ -46,6 +54,7 @@
 #texto{
   margin-left: 5px;
   margin-right: 130px;
+  font-size: 35px;
 }
 
 @@font-face {
@@ -117,6 +126,7 @@ header #menu #navbar-collapse-1 ul li{
 #row{
   margin-left: -20px;
   margin-right: 20px;
+
 }
 section hr{
     margin-left: 65px;
@@ -133,21 +143,11 @@ section h2{
   border-radius: 10px;
   margin-top: 10px;
 }
-#imagemacademia{
-  height: 300px;
-  margin-left: -550px;
-  margin-top: 400px;
+#imagemdetalhe{
+  height: 500px;
+  margin-left: 80px;
+  margin-top: 50px;
 
-
-}
-#h3{
-  font-size: 12px;
-}
-#p{
-  font-size: 12px;
-}
-#h2{
-  font-size: 20px;
 }
 footer{
   color: #999999;
@@ -156,9 +156,9 @@ footer{
 }
 
 footer h5{
-  font-size: 12px;
-    margin-left: -620px;
-    margin-top: -50px;
+  font-size: 30px;
+    margin-left: -30px;
+    margin-top: 0px;
 }
 
 .form-group{

@@ -3,17 +3,19 @@
   height:100px;
 }
 #botao{
-  margin-top: 10px;
-  margin-left: 440px;
-  height:100px;
+  margin-top: 20px;
+  margin-left: 900px;
+  height:450px;
 }
 
 #comentario{
-  margin-top: -20px;
-  margin-left: 200px;
-  height:100px;
-  padding:57px;
-  background-color:white;
+  margin-top: 0px;
+  margin-left: -65px;
+  background-color: white;
+
+  font-size: 18px;
+  width:300px;
+  height: 150px
 }
 
 
@@ -110,7 +112,7 @@ section h2{
   border-radius: 10px;
   margin-top: 10px;
 }
-#academiaimagem{
+#imagemdetalhe{
   height: 500px;
 }
 
