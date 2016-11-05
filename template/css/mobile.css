@@ -113,13 +113,14 @@ img {/*Imagens de telefones úteis*/
     width: 1000px;
     height: 1000px;
 }
-#navbar-brand {
+#navbar-brand {/*Menu de navegação*/
   float: left;
-  height: 200px;
+  height: 152px;
   /* padding: 28px 34px; */
   font-size: 50px;
-  line-height: 5.6;
+  line-height: 3.6;
   margin-left: 60mm;
+  margin-right: 60mm;
   }
   #titulo h2{/*titulo de telefones úteis*/
     font-family: Lobster;
@@ -127,8 +128,13 @@ img {/*Imagens de telefones úteis*/
     height: 100px;
 
   }
-  .bt{/*Caixa de busca de telefones úteis*/
+  #box-text{/*Caixa de busca de telefones úteis*/
     min-width:300px;
-    width: 200px;
-    height: 60mm;
+    width: 150mm;
+    height: 20mm;
+    font-size: 40px;
+  }
+  #botao-buscar{/*Botão de buscar*/
+    width: 15mm;
+    height: 15mm;
   }
