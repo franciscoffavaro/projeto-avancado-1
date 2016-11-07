@@ -1,0 +1,234 @@
+<html lang="pt-br" ng-app="academiamobile">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Guia RT - O Comércio local a seu alcance!</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-messages.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+      body {
+    padding: 40px 0px;   
+}
+
+#search {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+
+    -webkit-transform: translate(0px, -100%) scale(0, 0);
+  -moz-transform: translate(0px, -100%) scale(0, 0);
+  -o-transform: translate(0px, -100%) scale(0, 0);
+  -ms-transform: translate(0px, -100%) scale(0, 0);
+  transform: translate(0px, -100%) scale(0, 0);
+    
+    opacity: 0;
+}
+
+#search.open {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+    -moz-transform: translate(0px, 0px) scale(1, 1);
+  -o-transform: translate(0px, 0px) scale(1, 1);
+  -ms-transform: translate(0px, 0px) scale(1, 1);
+  transform: translate(0px, 0px) scale(1, 1); 
+    opacity: 1;
+}
+
+#search input[type="search"] {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0);
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    border: 0px;
+    margin: 0px auto;
+    margin-top: -51px;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none;
+}
+#search .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 61px;
+    margin-left: -45px;
+}
+#search .close {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  opacity: 1;
+  padding: 10px 17px;
+  font-size: 27px;
+}
+    </style>
+<script type="text/javascript">
+  $(function () {
+    $('a[href="#pesquisar"]').on('click', function(event) {
+        event.preventDefault();
+        $('#search').addClass('open');
+        $('#search > form > input[type="search"]').focus();
+        document.getElementById('menu').style.display = 'none';
+    });
+    
+    $('#search, #search button.close').on('click keyup', function(event) {
+        if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+            $(this).removeClass('open');
+            document.getElementById('menu').style.display = 'block';
+        }
+    });
+    
+    
+    //Do not include! This prevents the form from submitting for DEMO purposes only!
+    $('form').submit(function(event) {
+        event.preventDefault();
+        return false;
+    })
+});
+</script>
+
+    <script>
+      angular.module("academiamobile", ["ngMessages"]);
+      angular.module("academiamobile").controller("academiamobileCtrl", function ($scope, uppercaseFilter){
+        $scope.app="Página de listage de Academias para Mobile";
+        $scope.academias =[
+          {nome:"Academia 1", 
+           logo:"images/academiasesi.jpg",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"},
+          {nome:"Academia 2", 
+           logo:"images/academiasesi.jpg",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"},
+          {nome:"Academia 3", 
+           logo:"images/academiasesi.jpg",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"}
+        ];
+
+
+      });
+    </script>
+
+</head>
+<body ng-controller="academiamobileCtrl">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="menu">
+    <div class="container-fluid">
+                <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Guia-RT</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="indexmobile.html">Página inicial</a></li>
+                <li><a href="#">Avaliações</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categorias <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li class="active"><a href="#">Academias</a></li><li class="divider"></li>
+                        <li><a href="#">Bancos</a></li><li class="divider"></li>
+                        <li><a href="#">Saúde e Medicina</a></li><li class="divider"></li>
+                        <li><a href="#">Hoteis e Pousadas</a></li><li class="divider"></li>
+                        <li><a href="#">Organizações Religiosas</a></li><li class="divider"></li>
+                        <li><a href="#">Beleza</a></li><li class="divider"></li>
+                        <li><a href="#">Bares, Restaurantes e Lanchonetes</a></li><li class="divider"></li>
+                        <li><a href="#">Supermercados e Conveniências</a></li><li class="divider"></li>
+                        <li><a href="#">Casas de Shows e Eventos</a></li><li class="divider"></li>
+                        <li><a href="#">Educação</a></li><li class="divider"></li>
+                        <li><a href="#">Outros</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Telefones Úteis</a></li>
+              <li><a href="#pesquisar">Pesquisar</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<br/>
+<div class="container">
+
+    <section id="singup_section">
+      <div class="container-fluid">
+        <div class="row">
+
+          <h2 id="h2" style="text-align: center;">Lista de Academias</h2>
+
+          <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="Pesquisar por nome"/><br/>
+          <h1 ng-show="(academias | filter:criterioDeBusca).length == 0" style="text-align: center;">Desculpe, não há academias cadastradas com este nome.</h1>
+          <div ng-repeat="academia in academias | filter:criterioDeBusca">
+          <div class="col-sm-6 col-md-4" >
+            <div class="thumbnail">
+              <img id=box-image src={{academia.logo}} alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3 id="h3">{{academia.nome}}</h3>
+                  <p id="p" style="text-align: justify">{{academia.desc}}</p>
+                  <p><a id="p" href={{academia.link}} class="btn btn-primary" role="button">Visualizar</a></p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+
+
+      </section> 
+
+</div>
+
+<div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" value="" placeholder="O que está procurando?" />
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </form>
+</div>
+
+      <footer>
+        <div class="container-fluid" >
+          <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
+        </div>
+      </footer>
+
+</body>
+</html>
+
+
+
+
