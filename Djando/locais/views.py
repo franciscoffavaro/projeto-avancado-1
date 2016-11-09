@@ -18,11 +18,7 @@ def post_telefonesUteis(request):
 def post_contato(request):
     return render(request, 'locais/contato.html', {})
 
-def post_academia(request):
-    return render(request, 'locais/academia.html', {})
 
-def post_academiadescricao(request):
-    return render(request, 'locais/academiadescricao.html',{})
 
 def post_categorias(request):
     locais=Post.objects.all()
