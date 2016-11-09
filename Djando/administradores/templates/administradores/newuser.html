@@ -1,15 +1,53 @@
 {% extends "../base_restrict.html" %}
 {% load staticfiles %}
 
+{% block section %}
+  <form action = "{% url 'user_new' %}" class="form-horizontal" method="post">
+  {% csrf_token %}
+  <fieldset style="display:flex;justify-content:center;flex-direction:column;margin-left:55mm;">
 
-    {% block section %}
-      <section>
-        <form action="{% url 'user_new' %}" method="POST">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <input type="submit" value="Adicionar Usuário">
+  <!-- formulario cadastro de usuário -->
+  <h2 style="display:flex;justify-content:center;margin-left:-35mm";><i class="fa fa-hashtag" aria-hidden="true"></i>CadastrarAdministrador</h2>
 
-        </form>
-      </section>
+  <div class="form-group">
+    {{ form.login.errors }}
+    <label class="col-md-4 control-label">Usário</label>
+    <div class="col-md-4">
+    {{ form.login }}
+    </div>
+  </div>
 
-    {% endblock %}
+  <div class="form-group">
+    {{ form.senha.errors }}
+    <label class="col-md-4 control-label">Senha</label>
+    <div class="col-md-4">
+    {{ form.senha }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    {{ form.telefone.errors }}
+    <label class="col-md-4 control-label">Telefone para Contato</label>
+    <div class="col-md-4">
+    {{ form.telefone }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    {{ form.endereco.errors }}
+    <label class="col-md-4 control-label">Endereço</label>
+    <div class="col-md-4">
+    {{ form.endereco }}
+    </div>
+  </div>
+
+  <div style="margin-left:15mm" class="form-group">
+    <label class="col-md-4 control-label" for="Salvar"></label>
+    <div class="col-md-8">
+      <input class="btn btn-primary btn-m" type="submit" name="Cadastrar" value="Cadastrar">
+    </div>
+  </div>
+
+  </fieldset>
+</form>
+{% endblock %}

@@ -16,9 +16,9 @@ class Post(models.Model):
     Casas_Shows_Eventos='Casas de Shows e Eventos'
     Educacao='Educação'
     Outros='Outros'
-    CHOICE_CATEGORIAS=((Academias, 'Academias'),(Bancos,'Bancos'),(Saude_Medicina, 'Saude_Medicina'),(Hoteis_Pousadas, 'Hoteis_Pousadas'),
-    (Organizacoes_Religiosas, 'Organizacoes_Religiosas'), (Beleza, 'Beleza'), (Bares_Restaurantes_Lanchonetes,'Bares_Restaurantes_Lanchonetes'),
-    (Supermercados_Conveniencias, 'Supermercados_Conveniencias'),(Casas_Shows_Eventos, 'Casas_Shows_Eventos'),(Educacao, 'Educacao'),(Outros, 'Outros'),
+    CHOICE_CATEGORIAS=((Academias, 'Academias'),(Bancos,'Bancos'),(Saude_Medicina, 'Saúde e Medicina'),(Hoteis_Pousadas, 'Hotéis e Pousadas'),
+    (Organizacoes_Religiosas, 'Organizações Religiosas'), (Beleza, 'Beleza'), (Bares_Restaurantes_Lanchonetes,'Bares, Restaurantes e Lanchonetes'),
+    (Supermercados_Conveniencias, 'Supermercados e Conveniências'),(Casas_Shows_Eventos, 'Casas de Shows e Eventos'),(Educacao, 'Educação'),(Outros, 'Outros'),
     )
     autor = models.CharField(max_length=200)
     titulo_local = models.CharField(max_length=200)
