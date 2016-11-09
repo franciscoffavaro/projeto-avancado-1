@@ -22,14 +22,20 @@
             <div class="col-md-offset-5 col-md-3">
                 <div class="form-login">
                 <h4 class="text-align">Bem vindo ao Guia RT.</h4>
+                {% if message %}
+                <b>{{ message }}</b>
+                {% endif %}
                 <form action="{% url 'login' %}" method="POST">
                   {% csrf_token %}
-                  <input type="text" id="login" class="form-control input-sm chat-input" placeholder="Usuário" value="{{ login }}" />
+                  {{ form.login.errors }}
+                  <span class="label label-default">Login:</span>
+                  {{ form.login }}
                   </br>
-                  <input type="password" id="senha" class="form-control input-sm chat-input" placeholder="Senha" value="{{ senha }}" />
+                  <span class="label label-default">Senha:</span>
+                  {{ form.senha }}
                   </br>
                   <div class="wrapper">
-                      <input type="submit" class="btn btn-primary btn-m"/>
+                      <input style="margin-top:15px" type="submit" value="Login" class="btn btn-primary btn-m"/>
                   </div>
                 </form>
                 </div>

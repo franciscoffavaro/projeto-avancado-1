@@ -14,7 +14,7 @@
               <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
                 <div class="caption">
                   <h3>{{ local.titulo_local }}</h3>
-                  <p>{{ local.titulo_local }}</p>
+                  <p>{{ local.categorias }}</p>
                   <p><a href="{% url 'edit_local' local.id %}" class="btn btn-primary" role="button">Editar</a></p>
                   <p><a href="{% url 'delete_local' local.id %}" class="btn btn-primary" role="button">Deletar</a></p>
                 </div>

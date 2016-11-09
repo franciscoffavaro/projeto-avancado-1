@@ -1,0 +1,241 @@
+#tx{
+  margin-top: -50px;
+  margin-left: -400px;
+  height:0px;
+}
+#botao{
+  margin-top: 10px;
+  margin-left: -300px;
+  height:100px;
+}
+
+#comentario{
+  margin-top: -20px;
+  margin-left: -400px;
+  height:100px;
+  padding:57px;
+  background-color:white;
+}
+
+
+#caixaAvaliacao{
+
+  margin-left: 450px;
+  border-radius: 250px;
+  margin-top: 90px;
+}
+
+.estrelas{
+
+  margin-left: -350px;
+  line-height:80px;
+  font-size:2em;
+  cursor: pointer;
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+#texto{
+  margin-left: 5px;
+  margin-right: 130px;
+}
+
+@@font-face {
+  font-family: 'Yatra One'
+  src:url("../fonts/yatraone/YatraOne-Regular.ttf");
+  font-size: 1em;
+}
+
+@@font-face {
+  font-family: 'Lobster'
+  src:url("../fonts/lobster/Lobster-Regular.ttf");
+  font-size: 1em;
+}
+<<<<<<< HEAD
+#navbar-brand {
+    float: left;
+    height: 172px;
+    padding: 28px 34px;
+    font-size: 32px;
+    line-height: 5.6;
+=======
+#navbar-brand { /*configuração da barra de menu*/
+    float: none;
+    height: 80px;
+    padding: 10px 319px;
+    font-size: 54px;
+    line-height: 1.6;
+}
+#botao-buscar{ /*Dimensionamento do botão de busca*/
+  margin-left: 470px;
+
+>>>>>>> django-back
+}
+
+html, body{
+  max-width: 1128px;
+  margin: 0;
+  padding: 0;
+  height: 65%;
+  margin-right: 0;
+  padding:  0 2.4em 0 2.4em;
+
+}
+
+header{
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 20px;
+  width: 65%;
+}
+
+header #menu{
+    border-radius: 10px;
+    font-family: Lobster;
+<<<<<<< HEAD
+    font-size: 42px;
+    color: #fff;
+    width: 900px;
+    height: 250px;
+    margin-left: -80px;
+=======
+    font-size: 55px;
+    color: #fff;
+    width: 900px;
+    height: 277px;
+    margin-left: -30px;
+>>>>>>> django-back
+
+}
+
+header #menu #navbar-collapse-1 ul.dropdown-menu li{
+<<<<<<< HEAD
+  font-size: 40px;
+=======
+  font-size: 42px;
+>>>>>>> django-back
+}
+
+header #menu #navbar-collapse-1 ul li{
+  color: rgb(0, 0, 0);
+}
+
+#map{
+  height: 50%;
+  margin-left: 65px;
+  margin-right: 65px;
+  border-radius: 10px;
+  max-width: 778px;
+
+}
+#singup_section div.container-fluid div.row div.col-sm-6.col-md-4{
+  width: 180px;
+  margin-left: 85px;
+}
+#row{
+<<<<<<< HEAD
+  margin-left: -20px;
+  margin-right: 20px;
+=======
+  margin-left: -80px;
+  margin-right: -80px;
+>>>>>>> django-back
+}
+section hr{
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+section h2{
+  font-family: Lobster;
+  text-align: center;
+  color: rgba(99, 93, 93, 0.79);
+}
+#margem{
+  margin-bottom: 80px;
+}
+#box-image{
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#imagemacademia{
+<<<<<<< HEAD
+  height: 300px;
+  margin-left: -550px;
+  margin-top: 400px;
+=======
+  height: 550px;
+  margin-left: 65px;
+>>>>>>> django-back
+
+
+}
+#h3{
+<<<<<<< HEAD
+  font-size: 12px;
+}
+#p{
+  font-size: 12px;
+=======
+  font-size: 35px;
+}
+#p{
+  font-size: 27px;
+>>>>>>> django-back
+}
+#h2{
+  font-size: 40px;
+}
+footer{
+  color: #999999;
+  text-align: center;
+  font-family: Yatra One;
+}
+
+footer h5{
+  font-size: 12px;
+    margin-left: -620px;
+    margin-top: -50px;
+}
+
+.form-group{
+font-size: 40px;
+
+}
+#botao1{
+font-size: 40px;
+margin-left: 230px;
+}
+#botao2{
+font-size: 40px;
+margin-left: 10px;
+}
+
+#caixaTexto{
+margin-top: 0px;
+font-size: 35px;
+width:840px;
+height: 100px
+}
+#texto{
+  margin-top: 30px;
+}
+
+#formContato{ /*Formatação do formulário de contato*/
+  background:#F8F8F8;
+  color: rgb(99,93,93);
+  margin: 0 -120px 0 10px;
+  font-size: 35px;
+}
+#textNome{/*Formatação do formulário de contato: aumento do campo de texto dos inputs*/
+  font-size: 35px;
+  height: 80px;
+}

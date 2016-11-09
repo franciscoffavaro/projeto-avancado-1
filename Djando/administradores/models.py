@@ -6,6 +6,5 @@ class UserAdmin(models.Model):
     telefone = models.CharField(max_length=20)
     endereco = models.CharField(max_length=150)
 
-
     def __str__(self):
         return self.user.username
