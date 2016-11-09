@@ -1,5 +1,5 @@
 from django.conf.urls import include, url
-from . import views
+from .import views
 
 urlpatterns = [
     url(r'^$', views.post_index, name='index'),
@@ -9,5 +9,7 @@ urlpatterns = [
     url(r'^avaliacoes/', views.post_avaliacoes, name='avaliacoes'),
     url(r'^telefones_uteis/', views.post_telefonesUteis, name='telefones_uteis'),
     url(r'^contato/', views.post_contato, name='contato'),
-    
+    url(r'^academia/', views.post_academia, name='academia'),
+    url(r'^academiadescricao/', views.post_academiadescricao, name='academiadescricao'),
+
 ]
