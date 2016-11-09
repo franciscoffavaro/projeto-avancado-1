@@ -22,7 +22,6 @@ def post_categorias(request):
     locais=Post.objects.all()
     return render (request, 'locais/lista_locais.html', {})
 
-def post_academia(request):
-    return render (request,'locais/academia.html',{})
+
 
 # Create your views here.

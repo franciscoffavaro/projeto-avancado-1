@@ -1,3 +1,53 @@
+#tx{
+  margin-top: -50px;
+  margin-left: -400px;
+  height:0px;
+}
+#botao{
+  margin-top: 10px;
+  margin-left: -300px;
+  height:100px;
+}
+
+#comentario{
+  margin-top: -20px;
+  margin-left: -400px;
+  height:100px;
+  padding:57px;
+  background-color:white;
+}
+
+
+#caixaAvaliacao{
+
+  margin-left: 450px;
+  border-radius: 250px;
+  margin-top: 90px;
+}
+
+.estrelas{
+
+  margin-left: -350px;
+  line-height:80px;
+  font-size:2em;
+  cursor: pointer;
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+#texto{
+  margin-left: 5px;
+  margin-right: 130px;
+}
+
 @@font-face {
   font-family: 'Yatra One'
   src:url("../fonts/yatraone/YatraOne-Regular.ttf");
@@ -9,6 +59,14 @@
   src:url("../fonts/lobster/Lobster-Regular.ttf");
   font-size: 1em;
 }
+<<<<<<< HEAD
+#navbar-brand {
+    float: left;
+    height: 172px;
+    padding: 28px 34px;
+    font-size: 32px;
+    line-height: 5.6;
+=======
 #navbar-brand { /*configuração da barra de menu*/
     float: none;
     height: 80px;
@@ -19,6 +77,7 @@
 #botao-buscar{ /*Dimensionamento do botão de busca*/
   margin-left: 470px;
 
+>>>>>>> django-back
 }
 
 html, body{
@@ -41,16 +100,28 @@ header{
 header #menu{
     border-radius: 10px;
     font-family: Lobster;
+<<<<<<< HEAD
+    font-size: 42px;
+    color: #fff;
+    width: 900px;
+    height: 250px;
+    margin-left: -80px;
+=======
     font-size: 55px;
     color: #fff;
     width: 900px;
     height: 277px;
     margin-left: -30px;
+>>>>>>> django-back
 
 }
 
 header #menu #navbar-collapse-1 ul.dropdown-menu li{
+<<<<<<< HEAD
+  font-size: 40px;
+=======
   font-size: 42px;
+>>>>>>> django-back
 }
 
 header #menu #navbar-collapse-1 ul li{
@@ -70,8 +141,13 @@ header #menu #navbar-collapse-1 ul li{
   margin-left: 85px;
 }
 #row{
+<<<<<<< HEAD
+  margin-left: -20px;
+  margin-right: 20px;
+=======
   margin-left: -80px;
   margin-right: -80px;
+>>>>>>> django-back
 }
 section hr{
     margin-left: 65px;
@@ -91,16 +167,29 @@ section h2{
   margin-top: 10px;
 }
 #imagemacademia{
+<<<<<<< HEAD
+  height: 300px;
+  margin-left: -550px;
+  margin-top: 400px;
+=======
   height: 550px;
   margin-left: 65px;
+>>>>>>> django-back
 
 
 }
 #h3{
+<<<<<<< HEAD
+  font-size: 12px;
+}
+#p{
+  font-size: 12px;
+=======
   font-size: 35px;
 }
 #p{
   font-size: 27px;
+>>>>>>> django-back
 }
 #h2{
   font-size: 40px;
@@ -113,6 +202,31 @@ footer{
 
 footer h5{
   font-size: 12px;
+    margin-left: -620px;
+    margin-top: -50px;
+}
+
+.form-group{
+font-size: 40px;
+
+}
+#botao1{
+font-size: 40px;
+margin-left: 230px;
+}
+#botao2{
+font-size: 40px;
+margin-left: 10px;
+}
+
+#caixaTexto{
+margin-top: 0px;
+font-size: 35px;
+width:840px;
+height: 100px
+}
+#texto{
+  margin-top: 30px;
 }
 
 #formContato{ /*Formatação do formulário de contato*/
