@@ -1,93 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
 
     <meta charset="utf-8">
-    <title>Guia RT - O Comércio local a seu alcance!</title>
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Guia RT - O Comércio local a seu alcance!</title>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-default" id="menu">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Guia RT</a>
-          </div>
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-messages.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+                <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Guia-RT</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="indexmobile.html">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Avaliações</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li role="separator" class="divider"></li>
-                  <li><a href="academiamobile.html">Academias</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="bancosmobile.html">Bancos</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Saúde e Medicina</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Hoteis e Pousadas</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Organizações Religiosas</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Beleza</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Bares, Restaurantes e Lanchonetes</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Supermercados e Conveniências</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Casas de Shows e Eventos</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Educação</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Outros</a></li>
-                  <!-- Separador de dropdown <li role="separator" class="divider"></li> -->
-                </ul>
-              </li>
+                <li ><a href="indexmobile.html">Página inicial</a></li>
+                <li><a href="#">Avaliações</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Categorias <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">Academias</a></li><li class="divider"></li>
+                        <li><a href="#">Bancos</a></li><li class="divider"></li>
+                        <li><a href="#">Saúde e Medicina</a></li><li class="divider"></li>
+                        <li><a href="#">Hoteis e Pousadas</a></li><li class="divider"></li>
+                        <li><a href="#">Organizações Religiosas</a></li><li class="divider"></li>
+                        <li><a href="#">Beleza</a></li><li class="divider"></li>
+                        <li><a href="#">Bares, Restaurantes e Lanchonetes</a></li><li class="divider"></li>
+                        <li><a href="#">Supermercados e Conveniências</a></li><li class="divider"></li>
+                        <li><a href="#">Casas de Shows e Eventos</a></li><li class="divider"></li>
+                        <li><a href="#">Educação</a></li><li class="divider"></li>
+                        <li><a href="#">Outros</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Contato</a></li>
               <li><a href="#">Telefones Úteis</a></li>
-              <form class="navbar-form navbar-left">
+              <form role="search" class="navbar-form navbar-right">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Buscar">
+                    <input type="text" placeholder="Pesquisar" class="form-control">
+                    <button style="margin-right: 20px" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    
                 </div>
-                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
             </ul>
-          </div><!-- /.container-fluid -->
         </div>
-      </nav>
+    </div>
+</nav>
 
-    </header>
-    <!--Div que carrega o mapa no Template HTML -->
-    <div id="map"></div>
+<div id="map"></div>
     <!-- Início do Section com os Estabelecimentos que já estão cadastrados-->
     <section id="singup_section">
       <div class="container-fluid">
         <div class="row">
           <hr>
-          <h2 id="h2"><i class="fa fa-hashtag" aria-hidden="true"></i>EstabelecimentosCadastrados</h2>
+          <h2><i class="fa fa-hashtag" aria-hidden="true"></i>EstabelecimentosCadastrados</h2>
           <hr>
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
               <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
                 <div class="caption">
-                  <h3 id="h3">Pizzaria Cada da Fatia</h3>
-                  <p id="p">Descrição Inicial do Estabelecimento</p>
-                  <p><a id="p"href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
                 </div>
               </div>
             </div>
@@ -95,9 +90,9 @@
               <div class="thumbnail">
                 <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
                 <div class="caption">
-                  <h3 id="h3">Pizzaria Cada da Fatia</h3>
-                  <p id="p">Descrição Inicial do Estabelecimento</p>
-                  <p><a id="p"href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
                 </div>
               </div>
             </div>
@@ -105,9 +100,9 @@
               <div class="thumbnail">
                 <img id=box-image src="images/pizza.jpg" alt="Logo Estabelecimento">
                 <div class="caption">
-                  <h3 id="h3">Pizzaria Cada da Fatia</h3>
-                  <p id="p">Descrição Inicial do Estabelecimento</p>
-                  <p><a id="p"href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+                  <h3>Pizzaria Cada da Fatia</h3>
+                  <p>Descrição Inicial do Estabelecimento</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
                 </div>
               </div>
             </div>
@@ -124,9 +119,5 @@
       <script src="js/maps.js"></script>
       <!-- Api Javascript do Google Maps -->
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTGTcBHi7BoxsuZ-HqrB5LO4RBdMFF9SQ&callback=initMap"></script>
-      <!--Dependência JQuery do bootstrap -->
-      <script src="lib/jquery/jquery.js"></script>
-      <!--Arquivo Bootstrap -->
-      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    </body>
+</body>
 </html>
