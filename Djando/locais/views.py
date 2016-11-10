@@ -3,10 +3,11 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect # Funcao para redirecionar o usuario
 from django.contrib.auth.forms import UserCreationForm # Formulario de criacao de usuarios
 from django.contrib.auth.forms import AuthenticationForm # Formulario de autenticacao de usuarios
-from .models import Post
+from .models import *
+from .forms import *
 
 def post_index(request):
-    locais=Post.objects.all()
+    locais=Local.objects.all()
     return render(request, 'locais/index.html', {'locais':locais})
 
 def post_avaliacoes(request):
@@ -22,8 +23,22 @@ def post_categorias(request):
     return render (request, 'locais/lista_locais.html', {})
 
 def locais_detalhes(request, locais_post_id):
-    local = Post.objects.get(pk=locais_post_id)
-    return render (request, 'locais/locais_descricao.html', {'local':local})
+    local = Local.objects.get(pk=locais_post_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        form.save()
+    else:
+        form = CommentForm();
+    return render (request, 'locais/locais_descricao.html', {'local':local, 'form':form})
+
+def comment_locais(request):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        form.save()
+    else:
+        form = CommentForm();
+    return render(request, 'locais/locais_descricao.html', {'form':form})
+
 
 
 

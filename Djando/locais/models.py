@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-class Post(models.Model):
+class Local(models.Model):
     Academias='Academia'
     Bancos='Bancos'
     Saude_Medicina="Saúde e Medicina"
@@ -28,8 +28,15 @@ class Post(models.Model):
     longitude = models.DecimalField(max_digits=10, decimal_places=7)
     imagem = models.ImageField(upload_to = "locais/static/images/postagem", blank=True)
 
-    def publich():
-        self.save()
-
     def __str__(self):
         return self.titulo_local
+
+
+class Comment(models.Model):
+    locais = models.ForeignKey('Local', on_delete=models.CASCADE, default='')
+    nome = models.CharField(max_length=50)
+    comentario = models.TextField()
+    avaliacao = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.nome
