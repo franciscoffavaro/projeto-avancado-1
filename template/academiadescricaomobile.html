@@ -19,14 +19,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Guia RT</a>
+            <a id="navbar-brand" class="navbar-brand" href="#">Guia RT</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="active"><a href="indexmobile.html">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Avaliações</a></li>
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -61,9 +61,9 @@
               <li><a href="#">Telefones Úteis</a></li>
               <form class="navbar-form navbar-left">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Buscar">
+                  <input type="text" id = "box-text" class="form-control" placeholder="Buscar">
                 </div>
-                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button type="submit" class="btn btn-default"><i id = "botao-buscar" class="fa fa-search" aria-hidden="true"></i></button>
               </form>
             </ul>
           </div><!-- /.container-fluid -->
@@ -76,15 +76,12 @@
         <div class="row">
           <div class="container">
     <div>
-        <h2>
-            Academia
-        </h2>
-        <hr>
+        <div id= "titulo" style="text-align: center" ><h2>Academia</h2></div><hr>
     </div>
     <div class="row">
-        <div class="col-sm-7">
+        <div class="col-sm-12">
             <div>
-              <div class="texto" itemprop="description">
+              <div class="texto" itemprop="description" style="text-align: justify;" >
                     <p id="p">Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados, a Academia Fun and Fit conta com uma ampla área de "500 m²" proporcionando ao aluno:</p>
 <p id="p">Salas climatizadas, ampla área de musculação, sala cardiovascular contendo esteiras e bicicletas ergométricas, sala de artes marciais, piscina aquecida.</p>
 <p id="p">Nossa equipe conta com os melhores profissionais do Vale credenciados junto ao CREF (Conselho Regional de Educação Física), preparados para lhe ajudar a alcançar os seus objetivos e com um grande diferencial: ABERTO DAS 07:00 às 24:00 - HORÁRIO LIVRE.</p>
@@ -96,7 +93,6 @@
 </div>
 </div>
 <div class="column-right-inner">
-  <img id="imagemacademia"src="images/academiamodelo.jpg" alt="" />
 
 </div>
 </div>
