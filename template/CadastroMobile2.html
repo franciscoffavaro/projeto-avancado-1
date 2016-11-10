@@ -19,14 +19,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Guia RT</a>
+            <a id="navbar-brand"class="navbar-brand" href="#">Guia RT</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="indexmobile.html">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Avaliações</a></li>
+              <li class="active"><a href="mobile.html">Home<span class="sr-only">(current)</span></a></li>
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -72,46 +72,96 @@
 
     </header>
 
-    <section id="singup_section">
-      <div class="container-fluid">
-        <div class="row">
+    <!-- formulario cadastro -->
+    <legend>Cadastro de Estabelecimentos</legend>
 
-          <h2 id="h2">Academias</h2>
+    <!-- Div do formulario inteiro-->
+    <div class="form-group">
+        <!-- Autor da postagem de estabelecimentos-->
+      <label class="col-md-2 control-label" id="texto" for="Autor">Autor</label>
+      <div class="col-md-2">
+      <input id="caixaTexto" name="Autor" type="text" placeholder="Digite" class="form-control input-md" required="">
 
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-              <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3 id="h3">Academia</h3>
-                  <p id="p">Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados</p>
-                  <p><a id="p"href="AcademiaDescricaoMobile2.html" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3 id="h3">Academia</h3>
-                  <p id="p">Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados</p>
-                  <p><a id="p"href="AcademiaDescricaoMobile2.html" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3 id="h3">Academia</h3>
-                  <p id="p">Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados</p>
-                  <p><a id="p"href="AcademiaDescricaoMobile2.html" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> <!--Fim do Section dos Estabelecimentos Cadastrados-->
-      <!-- Rodapé -->
+
+    </div>
+
+    <!-- Adicionar titulo do texto-->
+
+      <label class="col-md-2 control-label" id="texto" for="Titulo">Titulo do Estabelecimento</label>
+      <div class="col-md-2">
+      <input id="caixaTexto" name="Titulo" type="text" placeholder="Digite" class="form-control input-md">
+
+      </div>
+
+
+    <!-- Adicionar Descrição do texto-->
+
+      <label class="col-md-2 control-label" id="texto" for="descricaodoestabelecimento">Descricao</label>
+      <div class="col-md-3">
+      <input id="caixaTexto" name="descricaodoestabelecimento" type="text" placeholder="Digite" class="form-control input-md">
+
+      </div>
+
+
+    <!-- adicionar Latitude-->
+
+      <label class="col-md-2 control-label" id="texto" for="Localização">Latitude</label>
+      <div class="col-md-2">
+      <input id="caixaTexto" name="Localização" type="text" placeholder="Digite" class="form-control input-md">
+
+      </div>
+
+
+    <!--adicionar Longitude-->
+
+      <label class="col-md-2 control-label" id="texto" for="Localizacao">Longitude</label>
+      <div class="col-md-2">
+      <input id="caixaTexto" name="Localizacao" type="text" placeholder="Digite" class="form-control input-md">
+
+
+    </div>
+
+    <!-- Selecionar categoria a ser inserida -->
+
+      <label class="col-md-2 control-label" id="texto" for="Categorias">Categorias</label>
+      <div class="col-md-2">
+        <select id="caixaTexto" name="Categorias" class="form-control">
+          <option value="1">Academias</option>
+          <option value="2">Bancos</option>
+          <option value="3">Saude e Medicina</option>
+          <option value="4">Hoteis e Pousadas</option>
+          <option value="5">Organizações Religiosas</option>
+          <option value="6">Beleza</option>
+          <option value="7">Bares, Restaurantes e Lanchonetes</option>
+          <option value="8">Supermercados e Conveniências</option>
+          <option value="9">Casas de Shows e Eventos</option>
+          <option value="10">Educação</option>
+          <option value="11">Outros</option>
+        </select>
+      </div>
+
+
+    <!-- Anexar imagem -->
+
+      <label class="col-md-2 control-label" id="texto" for="ImagemPrincipal">Imagem Principal</label>
+      <div class="col-md-2">
+        <input id="caixaTexto" name="ImagemPrincipal" class="input-file" type="file">
+      </div>
+
+
+    <!-- botão de confirmar ou cancelar cadastro -->
+
+      <label class="col-md-2 control-label" for="Salvar"></label>
+      <div class="col-md-4">
+        <button id="botao1" name="Salvar" class="btn btn-success">Salvar</button>
+        <button id="botao2" name="Cancelar" class="btn btn-danger">Cancelar</button>
+      </div>
+    </div>
+
+    </fieldset>
+    </form>
+
+
       <footer>
         <div class="container-fluid">
           <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>

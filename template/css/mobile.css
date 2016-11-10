@@ -78,10 +78,7 @@ section h2{
   border-radius: 10px;
   margin-top: 10px;
 }
-#imagemacademia{
-  height: 400px;
 
-}
 #h3{
   font-size: 50px;
   font-family: Lobster;
@@ -138,3 +135,130 @@ img {/*Imagens de telefones úteis*/
     width: 15mm;
     height: 15mm;
   }
+
+/* Inicio AcademiaDescriçãoMobile e CadastroMobile*/
+#tx{
+  margin-top: -250px;
+  margin-left: -300px;
+  height:20px;
+  font-size: 29px;
+
+}
+#botao{
+  margin-top: 25px;
+  margin-left: -50px;
+  height:200px;
+}
+#botaoE{
+  font-size: 40px;
+  margin-top: -20px;
+  margin-left: -50px;
+  height:70px;
+
+}
+
+#comentario{
+
+  margin-left: -185px;
+
+}
+
+
+#caixaAvaliacao{
+
+  margin-left: 400px;
+  border-radius: 150px;
+  margin-top: 300px;
+}
+
+.estrelas{
+
+  margin-left: -80px;
+  line-height:80px;
+  font-size:2em;
+  cursor: pointer;
+
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+#texto{
+  margin-left: 5px;
+  margin-right: 130px;
+  font-size: 35px;
+}
+
+
+#row{
+  margin-left: -20px;
+  margin-right: 20px;
+
+}
+
+
+#imagemdetalhe{
+  height: 550px;
+  margin-left: 150px;
+  margin-top: 50px;
+  width: 550px;
+
+
+}
+
+footer h5{
+  font-size: 30px;
+    margin-left: -30px;
+    margin-top: 0px;
+}
+
+.form-group{
+font-size: 40px;
+
+}
+#botao1{
+font-size: 40px;
+margin-left: 230px;
+}
+#botao2{
+font-size: 40px;
+margin-left: 10px;
+}
+
+#caixaTexto{
+margin-top: 0px;
+font-size: 35px;
+width:840px;
+height: 100px
+}
+#texto{
+  margin-top: 30px;
+}
+
+/* Inicio ContatoMobile*/
+#formContato{ /*Formatação do formulário de contato*/
+  background:#F8F8F8;
+  color: rgb(99,93,93);
+  margin: 0 -120px 0 10px;
+  font-size: 35px;
+}
+#textNome{/*Formatação do formulário de contato: aumento do campo de texto dos inputs*/
+  font-size: 35px;
+  height: 80px;
+}
+#formContato{
+background:#F8F8F8;
+color: rgb(99,93,93);
+margin: 0 3px 0 3px;
+font-size: 24px;
+}
+#textNome{
+font-size: 18px;
+}
