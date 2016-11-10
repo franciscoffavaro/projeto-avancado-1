@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^local/new/$', views.local_new, name='new_local'),
     url(r'^local/(?P<locais_post_id>[0-9]+)/edit/$', views.local_edit, name='edit_local'),
     url(r'^local/(?P<locais_post_id>[0-9]+)/delete/$', views.local_delete, name='delete_local'),
-    url(r'^login/$', views.user_logout, name='logout'),
+    url(r'^login/$', views.user_logout, name='logout')
 ]

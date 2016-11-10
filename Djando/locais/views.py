@@ -19,7 +19,12 @@ def post_contato(request):
     return render(request, 'locais/contato.html', {})
 
 def post_categorias(request):
-    locais=Post.objects.all()
     return render (request, 'locais/lista_locais.html', {})
+
+def locais_detalhes(request, locais_post_id):
+    local = Post.objects.get(pk=locais_post_id)
+    return render (request, 'locais/locais_descricao.html', {'local':local})
+
+
 
 # Create your views here.

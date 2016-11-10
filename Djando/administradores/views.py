@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserCreationForm # Formulario de criacao d
 from django.contrib.auth.forms import AuthenticationForm # Formulario de autenticacao de usuarios
 from django.contrib.auth.decorators import login_required #torna obrigatoria a necessidade de login para acesso a determinada página.
 from .models import * #Importa tudo em models
+from django.contrib.auth.models import User
 from administradores.forms import * #importa tudo em administradores.forms.
 
 #Função que autentica o usuário na tela de Login do Sistema
@@ -52,6 +53,8 @@ def user_new(request):
         form = UserForm()
     return render(request, 'administradores/newuser.html', {'form':form})
 
+
+
 #Adição de um novo Local
 @login_required
 def local_new(request):
@@ -62,6 +65,8 @@ def local_new(request):
     else:
         form = PostForm();
     return render(request, 'administradores/novo_local_restrict.html', {'form':form})
+
+
 
 #Ecição de um local usando como parâmetro seu ID
 @login_required(login_url='/login/')
@@ -74,7 +79,9 @@ def local_edit(request, locais_post_id):
     else:
         form = PostForm(instance=local)
 
-    return render(request, 'administradores/editar_local.html', {'form':form, 'local_id': locais_post_id})
+    return render(request, 'administradores/editar_local.html', {'form':form, 'locais':local})
+
+
 
 #Remoção de um Local do Sistema usando como parâmetro seu ID.
 @login_required(login_url='/login/')
@@ -83,12 +90,24 @@ def local_delete(request, locais_post_id):
     local.delete()
     return HttpResponseRedirect('/local/index/')
 
+
+
 @login_required(login_url='/login/')
 def local_index(request):
     locais = Post.objects.all()
-    users = UserAdmin.objects.all()
-
+    users = User.objects.all()
     return render (request, 'administradores/restrict_area.html', {'locais':locais, 'users':users})
+
+
+
+def local_comment(request, locais_post_id):
+    local = Post.objects.get(pk=locais_post_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        form.save()
+        return HttpResponseRedirect('/local/index/')
+
+
 
 def user_logout(request):
     logout(request)

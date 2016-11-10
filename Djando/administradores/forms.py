@@ -18,3 +18,8 @@ class UserForm(forms.Form):
     senha = forms.CharField(label='Senha', max_length=50, widget=forms.PasswordInput())
     telefone = forms.CharField(label='Telefone', max_length=20)
     endereco = forms.CharField(label='Endereço', max_length=150)
+
+class ComentForm(forms.Form):
+    nome = forms.CharField(label='nome', max_length=50)
+    comentario = forms.CharField(label='comentario', max_length=500)
+    avaliacao = forms.IntegerField()
