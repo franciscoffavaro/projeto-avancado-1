@@ -1,79 +1,52 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-br" ng-app="academiamobile">
+<head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Guia RT - O Comércio local a seu alcance!</title>
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+
+    <script src="js/angular.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular-messages.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-default" id="menu">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a id="navbar-brand"class="navbar-brand" href="#">Guia RT</a>
-          </div>
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="indexmobile.html">Home<span class="sr-only">(current)</span></a></li>
+    <script>
+      angular.module("academiamobile", ["ngMessages"]);
+      angular.module("academiamobile").controller("academiamobileCtrl", function ($scope, uppercaseFilter){
+        $scope.app="Página de listage de Academias para Mobile";
+        $scope.academias =[
+          {nome:"Academia 1", 
+           logo:"images/academiasesi.jpg",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"},
+          {nome:"Academia 2", 
+           logo:"images/academiasesi.jpg",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"},
+          {nome:"Academia 3", 
+           logo:"images/academiasesi.jpg",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"}
+        ];
 
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li role="separator" class="divider"></li>
-                  <li><a href="academiamobile.html">Academias</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="bancosmobile.html">Bancos</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Saúde e Medicina</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Hoteis e Pousadas</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Organizações Religiosas</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Beleza</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Bares, Restaurantes e Lanchonetes</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Supermercados e Conveniências</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Casas de Shows e Eventos</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Educação</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Outros</a></li>
-                  <!-- Separador de dropdown <li role="separator" class="divider"></li> -->
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="contatomobile.html">Contato</a></li>
-              <li class="active"><a href="listaTelefonicaMobile.html">Telefones Úteis</a></li>
-      
-              <form class="navbar-form navbar-left">
-                <div class="form-group">
-                <input type="text" id = "box-text" class="form-control" placeholder="Buscar">
-                </div>
-                <button type="submit"  class="btn btn-default"><i  id = "botao-buscar" class="fa fa-search" aria-hidden="true"></i></button>
-              </form>
-            </ul>
-          </div><!-- /.container-fluid -->
-        </div>
-      </nav>
+      });
+    </script>
 
-    </header>
+</head>
+<body ng-controller="academiamobileCtrl">
 
-    <section id="singup_section">
+<div ng-include="'ajax/navbar.html'"></div>
+
+<br/>
+<div class="container">
+
+<section id="singup_section">
       <div class="container-fluid">
         <div class="row">
 
@@ -139,18 +112,9 @@
 
           </div>
         </div>
-      </section> <!--Fim do Section dos Estabelecimentos Cadastrados-->
-      <!-- Rodapé -->
-      <footer>
-        <div class="container-fluid">
-          <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
-        </div>
-      </footer>
+      </section>
 
-
-      <!--Dependência JQuery do bootstrap -->
-      <script src="lib/jquery/jquery.js"></script>
-      <!--Arquivo Bootstrap -->
-      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    </body>
+</div>
+<div ng-include="'ajax/footer.html'"></div>
+</body>
 </html>
