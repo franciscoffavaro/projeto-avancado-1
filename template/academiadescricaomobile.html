@@ -1,154 +1,126 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-br" ng-app="academiamobile">
+<head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Guia RT - O Comércio local a seu alcance!</title>
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+
+    <script src="js/angular.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular-messages.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-default" id="menu">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Guia RT</a>
-          </div>
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="indexmobile.html">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Avaliações</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li role="separator" class="divider"></li>
-                  <li><a href="academiamobile.html">Academias</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="bancosmobile.html">Bancos</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Saúde e Medicina</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Hoteis e Pousadas</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Organizações Religiosas</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Beleza</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Bares, Restaurantes e Lanchonetes</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Supermercados e Conveniências</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Casas de Shows e Eventos</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Educação</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Outros</a></li>
-                  <!-- Separador de dropdown <li role="separator" class="divider"></li> -->
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Contato</a></li>
-              <li><a href="#">Telefones Úteis</a></li>
-              <form class="navbar-form navbar-left">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Buscar">
-                </div>
-                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
-              </form>
-            </ul>
-          </div><!-- /.container-fluid -->
-        </div>
-      </nav>
+    <style type="text/css">
+      
+      .estrelas{
+        font-size:2em;
+        cursor: pointer;
 
-    </header>
+      }
+      .estrelas input[type=radio] {
+        display: none;
+      }
+      .estrelas label i.fa:before {
+        content:'\f005';
+        color: #FC0;
+      }
+      .estrelas input[type=radio]:checked ~ label i.fa:before {
+        color: #CCC;
+      }
+    </style>
 
-      <div class="container-fluid">
-        <div class="row">
-          <div class="container">
-    <div>
-        <h2>
-            Academia
-        </h2>
-        <hr>
-    </div>
-    <div class="row">
-        <div class="col-sm-7">
-            <div>
-              <div class="texto" itemprop="description">
-                    <p id="p">Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados, a Academia Fun and Fit conta com uma ampla área de "500 m²" proporcionando ao aluno:</p>
-<p id="p">Salas climatizadas, ampla área de musculação, sala cardiovascular contendo esteiras e bicicletas ergométricas, sala de artes marciais, piscina aquecida.</p>
-<p id="p">Nossa equipe conta com os melhores profissionais do Vale credenciados junto ao CREF (Conselho Regional de Educação Física), preparados para lhe ajudar a alcançar os seus objetivos e com um grande diferencial: ABERTO DAS 07:00 às 24:00 - HORÁRIO LIVRE.</p>
-<p id="p">A Academia Fun and Fit também oferece sala de avaliação física montando todo um programa individualizado de treinamento.</p>
-<p id="p">NOSSO OBJETIVO</p>
-<p id="p">Oferecer o desenvolvimento de atividades físicas que proporcionem prazer, satisfação e bem estar. Buscando atender aos objetivos, expectativas e necessidades de nossos clientes, tendo seu investimento valorizado e que todos tenham uma melhora na qualidade de vida.</p>
-<p id="p">Venha conhecer a academia, aguardamos sua visita!</p>
-</div>
-</div>
-</div>
-<div class="column-right-inner">
-  <img id="imagemacademia"src="images/academiamodelo.jpg" alt="" />
 
-</div>
-</div>
-</div>
-</div>
 
-        <!--  <h2>Academias</h2>
+    <script>
+      angular.module("academiamobile", ["ngMessages"]);
+      angular.module("academiamobile").controller("academiamobileCtrl", function ($scope, uppercaseFilter){
+        $scope.app="Página de listage de Academias para Mobile";
+        $scope.academia =
+          {id:01,
+           nome:"Academia Fun and Fit", 
+           logo:"images/academiasesi.jpg",
+           desclonga:"A Academia Fun and Fit também oferece sala de avaliação física montando todo um programa individualizado de treinamento.",
+           objetivo:"Oferecer o desenvolvimento de atividades físicas que proporcionem prazer, satisfação e bem estar. Buscando atender aos objetivos, expectativas e necessidades de nossos clientes, tendo seu investimento valorizado e que todos tenham uma melhora na qualidade de vida. Venha conhecer a academia, aguardamos sua visita!",
+           link:"academiadescricaomobile.html"};
 
-         <div class="col-sm-6 col-md-4">
+      });
+    </script>
+
+</head>
+<body ng-controller="academiamobileCtrl">
+
+<div ng-include="'ajax/navbar.html'"></div>
+
+<br/>
+<div class="container">
+
+    <section id="singup_section">
+      <div class="container-fluid" >
+        <div class="row" >
+
+          <h2 id="h2" style="text-align: center;">{{academia.nome}}</h2>
+
+          <div class="col-sm-12 col-md-12" >
             <div class="thumbnail">
-              <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
+              <img id=box-image src={{academia.logo}} alt="Logo Estabelecimento">
                 <div class="caption">
-                  <h3>Academia</h3>
-                  <p>Descrição Inicial do Estabelecimento</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
+
+                  <p id="p" style="text-align: justify">{{academia.desclonga}}</p>
+                  <h3 class="text-center">Nosso Objetivo:</h3>
+                  <p id="p" style="text-align: justify">{{academia.objetivo}}</p>
                 </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3>Academia</h3>
-                  <p>Descrição Inicial do Estabelecimento</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3>Academia</h3>
-                  <p>Descrição Inicial do Estabelecimento</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Visualizar</a></p>
-                </div>
-              </div>
+
+
+                <form action="#" method="POST">
+          <div class="row text-center" style="display: flex;
+        justify-content: center">
+
+
+            <div class="col-sm-6 col-md-6" >
+          <label for="comment">Como você avalia este estabelecimento?</label>
+            <div class="estrelas" >
+                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                      <label for="cm_star-1"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                      <label for="cm_star-2"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                      <label for="cm_star-3"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                      <label for="cm_star-4"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                      <label for="cm_star-5"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                  </div>
+
+                <label for="comment">Deixe seu comentário:</label>
+                  
+                  
+
+                <textarea class="form-control" rows="5" id="mensagem" ></textarea>
             </div>
           </div>
-        </div>
-      </section> <!-Fim do Section dos Estabelecimentos Cadastrados-->
-      <!-- Rodapé -->
-      <footer>
-        <div class="container-fluid">
-          <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
-        </div>
-      </footer>
+        <hr/>
+        <div id="actions" class="row">
 
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="#" class="btn btn-default">Cancelar</a>
+        </div>
+      </form>
+              </div>
+            </div>
+            </div>
 
-      <!--Dependência JQuery do bootstrap -->
-      <script src="lib/jquery/jquery.js"></script>
-      <!--Arquivo Bootstrap -->
-      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    </body>
+      </section> 
+
+</div>
+<div ng-include="'ajax/footer.html'"></div>
+</body>
 </html>
