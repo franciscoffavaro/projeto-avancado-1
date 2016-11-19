@@ -86,7 +86,7 @@ def local_edit(request, locais_post_id):
 #Remoção de um Local do Sistema usando como parâmetro seu ID.
 @login_required(login_url='/login/')
 def local_delete(request, locais_post_id):
-    local = Post.objects.get(pk=locais_post_id)
+    local = Local.objects.get(pk=locais_post_id)
     local.delete()
     return HttpResponseRedirect('/local/index/')
 
@@ -94,14 +94,14 @@ def local_delete(request, locais_post_id):
 
 @login_required(login_url='/login/')
 def local_index(request):
-    locais = Post.objects.all()
+    locais = Local.objects.all()
     users = User.objects.all()
     return render (request, 'administradores/restrict_area.html', {'locais':locais, 'users':users})
 
 
 
 def local_comment(request, locais_post_id):
-    local = Post.objects.get(pk=locais_post_id)
+    local = Local.objects.get(pk=locais_post_id)
     if request.method == 'POST':
         form = CommentForm(request.POST)
         form.save()
