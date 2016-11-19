@@ -30,7 +30,7 @@
 
         $.getJSON('/local/json', function(data) {
             console.log(data);
-            $scope.teste=data;
+            $scope.locais=data;
         });
 
         $scope.academias =[
@@ -74,27 +74,11 @@
           <h2 id="h2" style="text-align: center;">Lista de Academias</h2>
 
           <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="Pesquisar por nome"/><br/>
-          <h1 ng-show="(academias | filter:criterioDeBusca).length == 0" style="text-align: center;">Desculpe, não há academias cadastradas com este nome.</h1>
-          <div ng-repeat="academia in academias | filter:criterioDeBusca" >
-          <div class="col-sm-6 col-md-4" >
-            <div class="thumbnail">
-              {% verbatim %}
-
-              <img id=box-image src={{academia.logo}} alt="Logo Estabelecimento">
-                <div class="caption">
-                  <h3 id="h3">{{academia.nome}}</h3>
-                  <p id="p" style="text-align: justify">{{academia.desc}}</p>
-                  <p><a id="p" href={{academia.link}} class="btn btn-primary" role="button">Visualizar</a></p>
-
-                </div>
-              </div>
-            </div>
-            </div>
-            <div ng-repeat="local in teste | filter:criterioDeBusca" >
+          <h1 ng-show="(locais | filter:criterioDeBusca).length == 0" style="text-align: center;">Desculpe, não há academias cadastradas com este nome.</h1>
+          {% verbatim %}
+            <div ng-repeat="local in locais | filter:criterioDeBusca" >
             <div class="col-sm-6 col-md-4" >
               <div class="thumbnail">
-
-
                 <img id=box-image src= alt="Logo Estabelecimento">
                   <div class="caption">
                     <h3 id="h3">{{local.titulo_local}}</h3>

@@ -73,6 +73,10 @@ def locais_json(request):
         return JsonResponse(list(queryset), safe=False)
 
 
+def post_listaTelefonicaMobile(request):
+    return render (request, 'locais/listaTelefonicaMobile.html', {})
+
+
 
 
 

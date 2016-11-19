@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^contato/', views.post_contato, name='contato'),
     url(r'^local/teste/', views.locais_detalhes, name='detalhes'),
     url(r'^local/json', views.locais_json, name='detalhes'),
-
+    url(r'^telefones_uteis_mobile/', views.post_listaTelefonicaMobile, name='contato'),
 ]
