@@ -1,0 +1,15 @@
+{% extends "../base_restrict.html" %}
+{% load staticfiles %}
+
+
+    {% block section %}
+      <section>
+        <form action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Login">
+
+        </form>
+      </section>
+
+    {% endblock %}

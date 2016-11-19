@@ -1,0 +1,114 @@
+{% load staticfiles %}
+
+
+<html lang="pt-br" ng-app="academiamobile">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Guia RT - O Comércio local a seu alcance!</title>
+
+    <script src="{% static 'js/angular.js' %}"></script>
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/angular-messages.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+    <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
+    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+
+    <script>
+      angular.module("academiamobile", ["ngMessages"]);
+
+
+
+      angular.module("academiamobile").controller("academiamobileCtrl", function ($scope, uppercaseFilter){
+        $scope.app="Página de listage de Academias para Mobile";
+
+        $.getJSON('/local/json', function(data) {
+            console.log(data);
+            $scope.teste=data;
+        });
+
+        $scope.academias =[
+          {nome:"Academia 1",
+           logo:"{% static 'images/academiasesi.jpg' %}",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"},
+
+          {nome:"Academia 2",
+           logo:"{% static 'images/academiasesi.jpg' %}",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"},
+          {nome:"Academia 3",
+           logo:"{% static 'images/academiasesi.jpg' %}",
+           desc:"Localizada na cidade de Rio Tinto, na região do Vale do Mamanguape, e com a experiência adquirida desde Junho de 1997 no desenvolvimento de programas físicos personalizados.",
+           link:"academiadescricaomobile.html"}
+        ];
+
+
+
+      });
+
+
+    </script>
+
+
+
+</head>
+<body ng-controller="academiamobileCtrl">
+
+<div ng-include="'{% static 'ajax/navbar.html' %}'"></div>
+
+
+<br/>
+<div class="container">
+
+    <section id="singup_section">
+      <div class="container-fluid" >
+        <div class="row" >
+
+          <h2 id="h2" style="text-align: center;">Lista de Academias</h2>
+
+          <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="Pesquisar por nome"/><br/>
+          <h1 ng-show="(academias | filter:criterioDeBusca).length == 0" style="text-align: center;">Desculpe, não há academias cadastradas com este nome.</h1>
+          <div ng-repeat="academia in academias | filter:criterioDeBusca" >
+          <div class="col-sm-6 col-md-4" >
+            <div class="thumbnail">
+              {% verbatim %}
+
+              <img id=box-image src={{academia.logo}} alt="Logo Estabelecimento">
+                <div class="caption">
+                  <h3 id="h3">{{academia.nome}}</h3>
+                  <p id="p" style="text-align: justify">{{academia.desc}}</p>
+                  <p><a id="p" href={{academia.link}} class="btn btn-primary" role="button">Visualizar</a></p>
+
+                </div>
+              </div>
+            </div>
+            </div>
+            <div ng-repeat="local in teste | filter:criterioDeBusca" >
+            <div class="col-sm-6 col-md-4" >
+              <div class="thumbnail">
+
+
+                <img id=box-image src= alt="Logo Estabelecimento">
+                  <div class="caption">
+                    <h3 id="h3">{{local.titulo_local}}</h3>
+                    <p id="p" style="text-align: justify">{{local.descricao}}</p>
+                    <p><a id="p" href= class="btn btn-primary" role="button">Visualizar</a></p>
+
+                  </div>
+                </div>
+              </div>
+              </div>
+              {% endverbatim %}
+      </section>
+
+</div>
+<div ng-include="'{% static 'ajax/footer.html' %}'"></div>
+</body>
+</html>

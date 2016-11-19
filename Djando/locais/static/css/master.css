@@ -1,0 +1,441 @@
+#tx{
+  margin-left: 330px;
+  height:100px;
+}
+#botao{
+  margin-top: 10px;
+  margin-left: 440px;
+  height:100px;
+}
+
+#comentario{
+  margin-top: -20px;
+  margin-left: 200px;
+  height:100px;
+  padding:57px;
+  background-color:white;
+}
+
+
+#caixaAvaliacao{
+
+  margin-left: 450px;
+  border-radius: 250px;
+  margin-top: 90px;
+}
+
+.estrelas{
+
+  margin-left: 335px;
+  line-height:80px;
+  font-size:2em;
+  cursor: pointer;
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+
+
+@@font-face {
+  font-family: 'Yatra One'
+  src:url("../fonts/yatraone/YatraOne-Regular.ttf");
+  font-size: 1em;
+}
+
+@@font-face {
+  font-family: 'Lobster'
+  src:url("../fonts/lobster/Lobster-Regular.ttf");
+  font-size: 1em;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header{
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 20px;
+}
+
+header #menu{
+    border-radius: 10px;
+    font-family: Lobster;
+    font-size: 20px;
+    color: #fff;
+}
+
+header #menu #navbar-collapse-1 ul.dropdown-menu li{
+  font-size: 17px;
+}
+
+header #menu #navbar-collapse-1 ul li{
+  color: rgb(0, 0, 0);
+}
+
+#map{
+  height: 70%;
+  margin-left: 65px;
+  margin-right: 65px;
+  border-radius: 10px;
+
+}
+#singup_section div.container-fluid div.row div.col-sm-6.col-md-4{
+  width: 25%;
+  margin-left: 85px;
+}
+
+section hr{
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+section h2{
+  font-family: Lobster;
+  text-align: center;
+  color: rgba(99, 93, 93, 0.79);
+}
+
+#box-image{
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#academiaimagem{
+  height: 500px;
+}
+
+footer{
+  color: #999999;
+  text-align: center;
+  font-family: Yatra One;
+}
+
+footer h5{
+  font-size: 12px;
+}
+
+@@font-face {
+  font-family: 'Yatra One'
+  src:url("../fonts/yatraone/YatraOne-Regular.ttf");
+  font-size: 1em;
+}
+
+@@font-face {
+  font-family: 'Lobster'
+  src:url("../fonts/lobster/Lobster-Regular.ttf");
+  font-size: 1em;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header{
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 20px;
+}
+
+header #menu{
+    border-radius: 10px;
+    font-family: Lobster;
+    font-size: 20px;
+    color: #fff;
+}
+
+header #menu #navbar-collapse-1 ul.dropdown-menu li{
+  font-size: 17px;
+}
+
+header #menu #navbar-collapse-1 ul li{
+  color: rgb(0, 0, 0);
+}
+
+#map{
+  height: 70%;
+  margin-left: 65px;
+  margin-right: 65px;
+  border-radius: 10px;
+
+}
+#singup_section div.container-fluid div.row div.col-sm-6.col-md-4{
+  width: 25%;
+  margin-left: 85px;
+}
+
+section hr{
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+section h2{
+  font-family: Lobster;
+  text-align: center;
+  color: rgba(99, 93, 93, 0.79);
+}
+
+#box-image{
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#academiaimagem{
+  height: 500px;
+}
+
+footer{
+  color: #999999;
+  text-align: center;
+  font-family: Yatra One;
+}
+
+footer h5{
+  font-size: 12px;
+}
+#formContato{
+  background:#F8F8F8;
+  color: rgb(99,93,93);
+  margin: 0 3px 0 3px;
+  font-size: 24px;
+}
+#textNome{
+  font-size: 18px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+
+#comentario{
+  height:60px;
+  padding:30px;
+  background-color:white;
+}
+
+#caixap2 {
+  margin-left: 120px;
+}
+
+#caixaAvaliacao{
+  margin-left: 200px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+#caixaAvaliacao2{
+    margin-left: 200px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+#caixaAvaliacao3{
+  margin-left: 400px;
+  border-radius: 20px;
+  margin-top: 25px;}
+
+.estrelas{
+  margin-left: 40px;
+  line-height:50px;
+  font-size:2em;
+  cursor: pointer;
+}
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+
+.estrelas2{
+  margin-left: 40px;
+  line-height:50px;
+  font-size:2em;
+  cursor: pointer;
+}
+.estrelas2 input[type=radio] {
+  display: none;
+}
+.estrelas2 label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas2 input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+@@font-face {
+  font-family: 'Yatra One'
+  src:url("../fonts/yatraone/YatraOne-Regular.ttf");
+  font-size: 1em;
+}
+
+@@font-face {
+  font-family: 'Lobster'
+  src:url("../fonts/lobster/Lobster-Regular.ttf");
+  font-size: 1em;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header{
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 20px;
+}
+
+header #menu{
+    border-radius: 10px;
+    font-family: Lobster;
+    font-size: 20px;
+    color: #fff;
+}
+
+header #menu #navbar-collapse-1 ul.dropdown-menu li{
+  font-size: 17px;
+}
+
+
+header #menu #navbar-collapse-1 ul li{
+  color: rgb(0, 0, 0);
+}
+
+#map{
+  height: 70%;
+  margin-left: 65px;
+  margin-right: 65px;
+  border-radius: 10px;
+
+}
+#singup_section div.container-fluid div.row div.col-sm-6.col-md-4{
+  width: 25%;
+  margin-left: 85px;
+}
+
+
+
+section hr{
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
+section h2{
+  font-family: Lobster;
+  text-align: center;
+  color: rgba(99, 93, 93, 0.79);
+}
+
+#box-image{
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+footer{
+  color: #999999;
+  text-align: center;
+  font-family: Yatra One;
+
+}
+
+footer h5{
+  font-size: 12px;
+}
+footer h4{
+  font-size: 30px;
+}
+/*Css Tela de Login*/
+
+#login{
+  background-color:#fff;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+  margin-right: 100px;
+}
+
+#pageLogin{
+  padding: 25px;
+  position: relative;
+}
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+.text-align{
+ border:0 solid #fff;
+ border-bottom-width:1px;
+ padding-bottom:10px;
+ text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+}
+.topImage{
+  background-image: url({% static 'images/Guia RT.png'%});
+}
+
+.image-brasao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  background-size: 50px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.image-login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowLogin{
+  margin-right: -120px;
+}
+
+#titulo{
+  margin-top: 30px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  font-family: Lobster;
+  font-size: 30px;
+  color:#696969;
+  text-align: center;
+}
+
+#formContato{
+  background:#F8F8F8;
+  color: rgb(99,93,93);
+  margin: 0 3px 0 340px;
+}

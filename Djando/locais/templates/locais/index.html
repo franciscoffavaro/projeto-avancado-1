@@ -1,0 +1,33 @@
+{% extends "../base.html" %}
+
+{% load staticfiles %}
+
+{% block section %}
+<!--Div que carrega o mapa no Template HTML -->
+<div id="map"></div>
+<!-- Início do Section com os Estabelecimentos que já estão cadastrados-->
+<section id="singup_section">
+  <div class="container-fluid">
+    <div class="row">
+      <hr>
+      <h2><i class="fa fa-hashtag" aria-hidden="true"></i>EstabelecimentosCadastrados</h2>
+      <hr>
+      {% for local in locais|slice:"3" %}
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img id=box-image src="{{ local.get_image_url }}" alt="Logo Estabelecimento">
+            <div class="caption">
+              <h3>{{ local.titulo_local }}</h3>
+              <p>
+                <b>Categoria:</b>
+              </p>
+              <p>{{ local.categorias }}</p>
+              <p><a href="{% url 'detalhes' local.id %}" class="btn btn-primary" role="button">Visualizar</a></p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section> <!--Fim do Section dos Estabelecimentos Cadastrados-->
+{% endblock %}

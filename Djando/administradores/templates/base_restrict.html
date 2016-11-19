@@ -1,0 +1,55 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Guia RT - O Comércio local a seu alcance!</title>
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    {% if user.is_active %}
+    <p style="display:flex;margin-left:258mm;margin-top:2mm;">
+      <b style="margin-rigth:10mm">Usuário Atual no Sistema: </b> <a href="">{{ user.username }}</a>
+      <a style="padding-left:6mm" href="{% url 'logout' %}">Logout</a>
+    </p>
+    {% endif %}
+    <header>
+      <div class="image-brasao">
+        <img src="{% static 'images/Guia RT.png'%}" alt="" />
+      </div>
+      <nav class="navbar navbar-default" id="menu">
+        <div class="container-fluid">
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1" >
+              <ul class="nav navbar-nav">
+                <li><a href="{% url 'index_restrict' %}">Home</a></li>
+                <li><a href="{% url 'new_local' %}">Adicionar Local</a></li>
+                <li><a href="{% url 'user_new' %}">Adicionar Administrador</a></li>
+              </ul>
+          </div><!-- /.container-fluid -->
+        </div>
+      </nav>
+
+    </header>
+    {%block section%}
+    {% endblock %}
+      <!-- Rodapé -->
+      <footer>
+        <div class="container-fluid">
+          <h5> © Desenvolvido pelo Time GuiaRT <i class="fa fa-heart" aria-hidden="true"></i></h5>
+        </div>
+      </footer>
+      <!-- Arquivo Javascript que carrega o Mapa -->
+      <script src="{% static 'js/maps.js' %}"></script>
+      <!-- Api Javascript do Google Maps -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTGTcBHi7BoxsuZ-HqrB5LO4RBdMFF9SQ&callback=initMap"></script>
+      <!--Dependência JQuery do bootstrap -->
+      <script src="{% static 'lib/jquery/jquery.js' %}"></script>
+      <!--Arquivo Bootstrap -->
+      <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

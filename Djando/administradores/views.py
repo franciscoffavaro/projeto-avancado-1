@@ -1,0 +1,114 @@
+# -*- coding: utf-8 -*-
+
+from django.shortcuts import render, render_to_response, redirect #modulo render para renderização e apresentação de artefato html no momento da requisição.
+from django.contrib.auth import authenticate, login, logout #inclui os modulos para autenticação e criação de login do usuário
+from django.http import HttpResponseRedirect # Funcao para redirecionar o usuario
+from django.contrib.auth.forms import UserCreationForm # Formulario de criacao de usuarios
+from django.contrib.auth.forms import AuthenticationForm # Formulario de autenticacao de usuarios
+from django.contrib.auth.decorators import login_required #torna obrigatoria a necessidade de login para acesso a determinada página.
+from .models import * #Importa tudo em models
+from django.contrib.auth.models import User
+from administradores.forms import * #importa tudo em administradores.forms.
+
+#Função que autentica o usuário na tela de Login do Sistema
+
+def user_login(request):
+    message = None
+    if request.method =='POST':
+        form = LoginForm(request.POST)
+
+        if form.is_valid():
+            form_login = form.cleaned_data['login']
+            form_senha = form.cleaned_data['senha']
+            user = authenticate(username=form_login, password=form_senha)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponseRedirect('/local/index/')
+                else:
+                    message = "Usuário Incorreto"
+            else:
+                message = "Nome de Usuário ou Senha Incorretos"
+    else:
+        form = LoginForm()
+    return render(request, 'administradores/telaLogin.html', {'form':form, 'message': message})
+
+@login_required
+def user_new(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+
+        if form.is_valid():
+            login = form.cleaned_data['login']
+            senha = form.cleaned_data['senha']
+            telefone = form.cleaned_data['telefone']
+            endereco = form.cleaned_data['endereco']
+            new_user = User.objects.create_user(login, password=senha)
+            new_user.save()
+            new_profile = UserAdmin(user=new_user, telefone=telefone, endereco=endereco)
+            new_profile.save()
+            return HttpResponseRedirect('/local/index/')
+
+    else:
+        form = UserForm()
+    return render(request, 'administradores/newuser.html', {'form':form})
+
+
+
+#Adição de um novo Local
+@login_required
+def local_new(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        form.save()
+        return HttpResponseRedirect('/local/index/')
+    else:
+        form = PostForm();
+    return render(request, 'administradores/novo_local_restrict.html', {'form':form})
+
+
+
+#Ecição de um local usando como parâmetro seu ID
+@login_required(login_url='/login/')
+def local_edit(request, locais_post_id):
+    local = Post.objects.get(pk=locais_post_id)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=local)
+        form.save()
+        return HttpResponseRedirect('/local/index/')
+    else:
+        form = PostForm(instance=local)
+
+    return render(request, 'administradores/editar_local.html', {'form':form, 'locais':local})
+
+
+
+#Remoção de um Local do Sistema usando como parâmetro seu ID.
+@login_required(login_url='/login/')
+def local_delete(request, locais_post_id):
+    local = Post.objects.get(pk=locais_post_id)
+    local.delete()
+    return HttpResponseRedirect('/local/index/')
+
+
+
+@login_required(login_url='/login/')
+def local_index(request):
+    locais = Post.objects.all()
+    users = User.objects.all()
+    return render (request, 'administradores/restrict_area.html', {'locais':locais, 'users':users})
+
+
+
+def local_comment(request, locais_post_id):
+    local = Post.objects.get(pk=locais_post_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        form.save()
+        return HttpResponseRedirect('/local/index/')
+
+
+
+def user_logout(request):
+    logout(request)
+    return redirect ('user_login')

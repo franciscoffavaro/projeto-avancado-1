@@ -1,0 +1,38 @@
+{% extends "../base.html" %}
+{% load staticfiles %}
+
+
+{% block section %}
+      <!-- Início do Section de contato-->
+      <section id="singup_section">
+        <div class="container-fluid">
+          <div class="row">
+            <hr>
+            <h2><i class="fa fa-hashtag" aria-hidden="true"></i>Fale Conosco</h2>
+            <hr>
+            <div class="col-sm-12 col-md-9">
+              <div class="thumbnail" id="formContato">
+                <div class="caption">
+                  <form name="formulario" action="" method="post">
+
+                    <input type=hidden name="destino" value="">
+                    <input type=hidden name="enviado" value="">
+                    <p><b>Nome:</b><br>
+                    <input type=text name="nome" size="70"></p><br>
+                    <p><b>Email:</b><br>
+                    <input type=text name="email" size="70"></p><br>
+                    <p><b>Assunto:</b><br>
+                    <input type=text name="assunto" size="70"></p><br>
+                    <p><b>Mensagem:</b><br>
+                    <textarea name="Mensagem" rows="10" cols="72" wrap="virtual"></textarea></p><br>
+                    <p>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                    <button type="reset" class="btn btn-warning">Limpar Formulário</button>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> <!--Fim do Section de Contato-->
+{% endblock %}

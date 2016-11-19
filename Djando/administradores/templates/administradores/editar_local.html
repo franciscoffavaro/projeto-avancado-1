@@ -1,0 +1,85 @@
+{% extends "../base_restrict.html" %}
+{% load staticfiles %}
+
+{% block section %}
+<form action = "" class="form-horizontal" method="post">
+  {% csrf_token %}
+  <fieldset style="display:flex;justify-content:center;flex-direction:column;margin-left:55mm;">
+
+  <!-- formulario cadastro -->
+  <h2 style="display:flex;justify-content:center;margin-left:-35mm"><i class="fa fa-hashtag" aria-hidden="true"></i>CadastrarEstabelecimento</h2>
+
+  <!-- Autor da postagem de estabelecimentos-->
+  <div class="form-group">
+    {{ form.autor.errors}}
+    <label class="col-md-4 control-label" for="Autor">Autor</label>
+    <div class="col-md-4">
+    {{ form.autor }}
+    </div>
+  </div>
+
+  <!-- Adicionar titulo do texto-->
+  <div class="form-group">
+    {{ form.titulo_local.errors}}
+    <label class="col-md-4 control-label" for="Titulo">Título do Estabelecimento</label>
+    <div class="col-md-4">
+      {{ form.titulo_local }}
+    </div>
+  </div>
+
+  <!-- Adicionar Descrição do texto-->
+  <div class="form-group">
+    {{ form.descricao.errors}}
+    <label class="col-md-4 control-label" for="descricaodoestabelecimento">Descrição</label>
+    <div class="col-md-5">
+      {{ form.descricao }}
+    </div>
+  </div>
+
+  <!-- adicionar Latitude-->
+  <div class="form-group">
+    {{ form.latitude.errors }}
+    <label class="col-md-4 control-label" for="Localização">Latitude</label>
+    <div class="col-md-4">
+      {{ form.latitude }}
+    </div>
+  </div>
+
+  <!--adicionar Longitude-->
+  <div class="form-group">
+    {{ form.longitude.errors }}
+    <label class="col-md-4 control-label" for="Localizacao">Longitude</label>
+    <div class="col-md-4">
+      {{ form.longitude }}
+    </div>
+  </div>
+
+  <!-- Selecionar categoria a ser inserida -->
+  <div class="form-group">
+    {{ form.categorias.errors }}
+    <label class="col-md-4 control-label" for="Categorias">Categorias</label>
+    <div class="col-md-4">
+      {{ form.categorias }}
+    </div>
+  </div>
+
+  <!-- Fanexar imagem -->
+  <div class="form-group">
+    {{ form.imagem.errors }}
+    <label class="col-md-4 control-label" for="ImagemPrincipal">Imagem Principal</label>
+    <div class="col-md-4">
+      {{ form.imagem }}
+    </div>
+  </div>
+
+  <!-- botão de confirmar ou cancelar cadastro -->
+  <div style="margin-left:15mm" class="form-group">
+    <label class="col-md-4 control-label" for="Salvar"></label>
+    <div class="col-md-8">
+      <input class="btn btn-primary btn-m" type="submit" name="Confirmar" value="Confirmar Edição">
+    </div>
+  </div>
+
+  </fieldset>
+</form>
+{% endblock %}
