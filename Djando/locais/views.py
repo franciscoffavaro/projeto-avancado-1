@@ -75,7 +75,8 @@ def locais_json(request):
 
 def post_listaTelefonicaMobile(request):
     return render (request, 'locais/listaTelefonicaMobile.html', {})
-
+def post_contatomobile(request):
+    return render (request, 'locais/contatomobile.html', {})
 
 
 

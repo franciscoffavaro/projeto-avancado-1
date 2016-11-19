@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^local/teste/', views.locais_detalhes, name='detalhes'),
     url(r'^local/json', views.locais_json, name='detalhes'),
     url(r'^telefones_uteis_mobile/', views.post_listaTelefonicaMobile, name='contato'),
+    url(r'^contato_mobile/', views.post_contatomobile, name='contato_mobile'),
 ]
