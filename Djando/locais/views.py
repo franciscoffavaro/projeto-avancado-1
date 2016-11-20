@@ -42,19 +42,6 @@ def comment_locais(request):
         form = CommentForm();
     return render(request, 'locais/locais_descricao.html', {'form':form})
 
-def locais_detalhes(request):
-    local1 = Local.objects.all()
-    local = serializers.serialize("json", Local.objects.all())
-
-
-    print(local)
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        form.save()
-    else:
-        form = CommentForm();
-    return render (request, 'locais/academiamobile.html', {'local':local, 'form':form})
-
 
 def locais_json(request):
 
@@ -72,11 +59,16 @@ def locais_json(request):
 
         return JsonResponse(list(queryset), safe=False)
 
-
+def post_academiasmobile(request):
+    return render (request, 'locais/academiamobile.html', {})
 def post_listaTelefonicaMobile(request):
     return render (request, 'locais/listaTelefonicaMobile.html', {})
 def post_contatomobile(request):
     return render (request, 'locais/contatomobile.html', {})
+def post_bancosmobile(request):
+    return render (request, 'locais/bancosmobile.html', {})
+def post_indexmobile(request):
+    return render (request, 'locais/indexmobile.html', {})
 
 
 
