@@ -58,20 +58,21 @@ def user_new(request):
 #Adição de um novo Local
 @login_required
 def local_new(request):
+    users = User.objects.all()
     if request.method == 'POST':
         form = PostForm(request.POST)
         form.save()
         return HttpResponseRedirect('/local/index/')
     else:
         form = PostForm();
-    return render(request, 'administradores/novo_local_restrict.html', {'form':form})
+    return render(request, 'administradores/novo_local_restrict.html', {'form':form, 'users':users})
 
 
 
 #Ecição de um local usando como parâmetro seu ID
 @login_required(login_url='/login/')
 def local_edit(request, locais_post_id):
-    local = Post.objects.get(pk=locais_post_id)
+    local = Local.objects.get(pk=locais_post_id)
     if request.method == 'POST':
         form = PostForm(request.POST, instance=local)
         form.save()
