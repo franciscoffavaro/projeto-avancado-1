@@ -30,6 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyCBKFsdF0ytgHPlW7I-cgnGkYfepeOOXio'
 
 # Application definition
 
@@ -42,8 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'locais',
     'administradores',
+    'geoposition',
 ]
-
+# GEOPOSITION_MAP_OPTIONS = {
+#     'minZoom': 15,
+#     'maxZoom': 18,
+# }
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

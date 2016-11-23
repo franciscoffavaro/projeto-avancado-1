@@ -71,7 +71,7 @@ def local_new(request):
 #Ecição de um local usando como parâmetro seu ID
 @login_required(login_url='/login/')
 def local_edit(request, locais_post_id):
-    local = Post.objects.get(pk=locais_post_id)
+    local = Local.objects.get(pk=locais_post_id)
     if request.method == 'POST':
         form = PostForm(request.POST, instance=local)
         form.save()

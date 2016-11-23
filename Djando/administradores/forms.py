@@ -7,7 +7,7 @@ from locais.models import *
 class PostForm(ModelForm):
     class Meta:
         model = Local
-        fields=["autor", "titulo_local", "descricao", "categorias", "latitude", "longitude", "imagem"]
+        fields=["autor", "titulo_local", "descricao", "categorias", "position", "imagem"]
 
 class LoginForm(forms.Form):
     login = forms.CharField(label='Login', max_length=50)
