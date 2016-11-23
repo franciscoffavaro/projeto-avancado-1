@@ -37,22 +37,9 @@
   </div>
 
   <!-- adicionar Latitude-->
-  <div class="form-group">
-    {{ form.latitude.errors }}
-    <label class="col-md-4 control-label" for="Localização">Latitude</label>
-    <div class="col-md-4">
-      {{ form.latitude }}
-    </div>
-  </div>
-
-  <!--adicionar Longitude-->
-  <div class="form-group">
-    {{ form.longitude.errors }}
-    <label class="col-md-4 control-label" for="Localizacao">Longitude</label>
-    <div class="col-md-4">
-      {{ form.longitude }}
-    </div>
-  </div>
+    {{ form.position.errors }}
+      {{ form.media }}
+      {{ form.position }}
 
   <!-- Selecionar categoria a ser inserida -->
   <div class="form-group">

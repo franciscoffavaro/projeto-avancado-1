@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
     <link rel="stylesheet" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
+    <!--Dependência JQuery do bootstrap -->
+    <script src="{% static 'lib/jquery/jquery.js' %}"></script>
   </head>
   <body>
     {% if user.is_active %}
@@ -44,12 +46,6 @@
         </div>
       </footer>
       <!-- Arquivo Javascript que carrega o Mapa -->
-      <script src="{% static 'js/maps.js' %}"></script>
-      <!-- Api Javascript do Google Maps -->
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTGTcBHi7BoxsuZ-HqrB5LO4RBdMFF9SQ&callback=initMap"></script>
-      <!--Dependência JQuery do bootstrap -->
-      <script src="{% static 'lib/jquery/jquery.js' %}"></script>
-      <!--Arquivo Bootstrap -->
       <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
     </body>
 </html>

@@ -58,14 +58,13 @@ def user_new(request):
 #Adição de um novo Local
 @login_required
 def local_new(request):
-    users = User.objects.all()
     if request.method == 'POST':
         form = PostForm(request.POST)
         form.save()
         return HttpResponseRedirect('/local/index/')
     else:
         form = PostForm();
-    return render(request, 'administradores/novo_local_restrict.html', {'form':form, 'users':users})
+    return render(request, 'administradores/novo_local_restrict.html', {'form':form})
 
 
 
