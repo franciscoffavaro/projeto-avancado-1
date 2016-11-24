@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^local/(?P<locais_post_id>[0-9]+)/detalhes/', views.locais_detalhes, name='detalhes'),
     url(r'^telefones_uteis/', views.post_telefonesUteis, name='telefones_uteis'),
     url(r'^contato/', views.post_contato, name='contato'),
-    url(r'^(?P<locais_local_categoria>)/$', views.locais_categoria, name='categorias'),
+    url(r'^categoria/(?P<locais_categoria>[A-Za-z]+)/$', views.locais_categoria, name='categorias'),
 
     url(r'^local/json', views.locais_json, name='json'),
     url(r'^index_mobile/', views.post_indexmobile, name='indexmobile'),
@@ -17,5 +17,5 @@ urlpatterns = [
     url(r'^bancos_mobile/', views.post_bancosmobile, name='bancos_mobile'),
     url(r'^restaurante_mobile/', views.post_restaurantemobile, name='restaurante_mobile'),
     url(r'^academiadesc_mobile/', views.post_academiadescmobile, name='restaurante_mobile'),
-    
+
 ]

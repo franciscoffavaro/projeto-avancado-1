@@ -46,8 +46,9 @@ def comment_locais(request):
     return render(request, 'locais/locais_descricao.html', {'form':form})
 
 def locais_categoria(request, locais_categoria):
-    locais = Local.objets.get(pk=locais_local_categoria)
+    locais = Local.objects.filter(categorias=locais_categoria)
     return render (request, 'locais/categorias.html', {'locais':locais})
+
 
 
 def rec(n1,n2):
