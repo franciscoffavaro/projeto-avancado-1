@@ -112,6 +112,8 @@ def post_indexmobile(request):
     return render (request, 'locais/indexmobile.html', {})
 def post_restaurantemobile(request):
     return render (request, 'locais/restaurantemobile.html', {})
+def post_academiadescmobile(request):
+    return render (request, 'locais/academiadescricaomobile.html', {})
 
 
 
