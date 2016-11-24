@@ -48,8 +48,20 @@
         <div class="row" >
 
           <h2 id="h2" style="text-align: center;"></h2>
-          <div id="map"></div>
-
+              <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -6.805643, lng: -35.074629};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
 
             {% verbatim %}
             <div ng-repeat="local in locais | filter:criterioDeBusca | filter:local.categoria='Academia, Restaurantes e Lanchonetes'" >
@@ -67,7 +79,7 @@
               </div>
               {% endverbatim %}
       </section>
-      <script src="{% static 'js/maps.js' %}"></script>
+      
       <!-- Api Javascript do Google Maps -->
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBKFsdF0ytgHPlW7I-cgnGkYfepeOOXio&callback=initMap"></script>
 <div ng-include="'{% static 'ajax/footer.html' %}'"></div>
