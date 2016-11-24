@@ -50,7 +50,7 @@ def rec(n1,n2):
     locais=[]
     for i in range (n1,n2):
         
-            print(i)
+            
             try:
                 temp=Local.objects.get(pk=i)
                 local={}
@@ -72,11 +72,11 @@ def rec(n1,n2):
 def locais_json(request):
 
         local1 = Local.objects.all()
-        teste = Local.objects.get(pk=3)
-        print(local1)
-
-        x=(len(local1))+1
         
+        
+
+        x=(Local.objects.latest('pk').pk)+1
+
         
 
 
