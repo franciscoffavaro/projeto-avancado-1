@@ -14,6 +14,15 @@
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/angular-messages.js' %}"></script>
     <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    <style type="text/css">
+    #map{
+      height: 70%;
+      margin-left: 65px;
+      margin-right: 65px;
+      border-radius: 10px;
+
+    }
+    </style>
 
 
     <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
@@ -39,6 +48,7 @@
         <div class="row" >
 
           <h2 id="h2" style="text-align: center;"></h2>
+          <div id="map"></div>
 
 
             {% verbatim %}
@@ -57,7 +67,9 @@
               </div>
               {% endverbatim %}
       </section>
-
+      <script src="{% static 'js/maps.js' %}"></script>
+      <!-- Api Javascript do Google Maps -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBKFsdF0ytgHPlW7I-cgnGkYfepeOOXio&callback=initMap"></script>
 <div ng-include="'{% static 'ajax/footer.html' %}'"></div>
 </body>
 </html>
