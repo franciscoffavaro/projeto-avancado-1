@@ -6,18 +6,18 @@ from geoposition.fields import GeopositionField
 class Local(models.Model):
     Academias='Academia'
     Bancos='Bancos'
-    Saude_Medicina="Saúde e Medicina"
-    Hoteis_Pousadas='Hoteis e Pousadas'
-    Organizacoes_Religiosas='Organizações Religiosas'
-    Beleza='Beleza'
-    Bares_Restaurantes_Lanchonetes='Bares, Restaurantes e Lanchonetes'
-    Supermercados_Conveniencias='Supermercados e Conveniência'
-    Casas_Shows_Eventos='Casas de Shows e Eventos'
-    Educacao='Educação'
+    Saude_Medicina="SM"
+    Hoteis_Pousadas='HP'
+    Organizacoes_Religiosas='OR'
+    Beleza='BL'
+    Bares_Restaurantes_Lanchonetes='BRL'
+    Supermercados_Conveniencias='SC'
+    Casas_Shows_Eventos='CSE'
+    Educacao='Educacao'
     Outros='Outros'
-    CHOICE_CATEGORIAS=((Academias, 'Academias'),(Bancos,'Bancos'),(Saude_Medicina, 'Saúde e Medicina'),(Hoteis_Pousadas, 'Hotéis e Pousadas'),
-    (Organizacoes_Religiosas, 'Organizações Religiosas'), (Beleza, 'Beleza'), (Bares_Restaurantes_Lanchonetes,'Bares, Restaurantes e Lanchonetes'),
-    (Supermercados_Conveniencias, 'Supermercados e Conveniências'),(Casas_Shows_Eventos, 'Casas de Shows e Eventos'),(Educacao, 'Educação'),(Outros, 'Outros'),
+    CHOICE_CATEGORIAS=((Academias, 'Academias'),(Bancos,'Bancos'),(Saude_Medicina, 'SM'),(Hoteis_Pousadas, 'HP'),
+    (Organizacoes_Religiosas, 'OR'), (Beleza, 'BL'), (Bares_Restaurantes_Lanchonetes,'BRL'),
+    (Supermercados_Conveniencias, 'SC'),(Casas_Shows_Eventos, 'CSE'),(Educacao, 'Educacao'),(Outros, 'Outros'),
     )
     autor = models.CharField(max_length=200)
     titulo_local = models.CharField(max_length=200)
