@@ -110,6 +110,8 @@ def post_bancosmobile(request):
     return render (request, 'locais/bancosmobile.html', {})
 def post_indexmobile(request):
     return render (request, 'locais/indexmobile.html', {})
+def post_restaurantemobile(request):
+    return render (request, 'locais/restaurantemobile.html', {})
 
 
 

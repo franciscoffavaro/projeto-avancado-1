@@ -1,7 +1,6 @@
 {% load staticfiles %}
 
-
-<html lang="pt-br" ng-app="indexmobile">
+<html lang="pt-br" ng-app="restaurantemobile">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,29 +20,45 @@
     <link href="{% static 'css/signin.css' %}" rel="stylesheet">
 
     <script>
-      angular.module("indexmobile", ["ngMessages"]);
-      angular.module("indexmobile").controller("indexmobileCtrl", function ($scope, uppercaseFilter){
+      angular.module("restaurantemobile", ["ngMessages"]);
+
+
+
+      angular.module("restaurantemobile").controller("restaurantemobileCtrl", function ($scope, uppercaseFilter){
+        $scope.app="Página de listagem de Restaurantes";
+
+        $.getJSON('/local/json', function(data) {
+            console.log(data);
+            $scope.locais=data;
+        });
+
+
       });
+
 
     </script>
 
+
+
 </head>
-<body ng-controller="indexmobileCtrl">
+<body ng-controller="restaurantemobileCtrl">
 
 <div ng-include="'{% static 'ajax/navbar.html' %}'"></div>
 
+
 <br/>
-div class="container">
+<div class="container">
 
     <section id="singup_section">
       <div class="container-fluid" >
         <div class="row" >
 
-          <h2 id="h2" style="text-align: center;"></h2>
+          <h2 id="h2" style="text-align: center;">Lista de Restaurantes</h2>
 
-
-            {% verbatim %}
-            /*<div ng-repeat="local in locais | filter:criterioDeBusca | filter:local.categoria='Bares, Restaurantes e Lanchonetes'" >*/
+          <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="Pesquisar por nome"/><br/>
+          <h1 ng-show="(locais | filter:criterioDeBusca).length == 0" style="text-align: center;">Desculpe, não há restaurantes cadastrados com este nome.</h1>
+          {% verbatim %}
+            <div ng-repeat="local in locais | filter:criterioDeBusca | filter:local.categoria='Bares, Restaurantes e Lanchonetes'" >
             <div class="col-sm-6 col-md-4" >
               <div class="thumbnail">
                 <img id=box-image src= alt="Logo Estabelecimento">
@@ -59,6 +74,10 @@ div class="container">
               {% endverbatim %}
       </section>
 
+    </div>
+</div>
+</div>
 <div ng-include="'{% static 'ajax/footer.html' %}'"></div>
 </body>
 </html>
+s
