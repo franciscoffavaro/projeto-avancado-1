@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^contato_mobile/', views.post_contatomobile, name='contato_mobile'),
     url(r'^bancos_mobile/', views.post_bancosmobile, name='bancos_mobile'),
     url(r'^restaurante_mobile/', views.post_restaurantemobile, name='restaurante_mobile'),
+    url(r'^academiadesc_mobile/', views.post_academiadescmobile, name='restaurante_mobile'),
 
 ]
