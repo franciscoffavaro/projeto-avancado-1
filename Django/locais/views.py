@@ -78,14 +78,7 @@ def locais_json(request):
 
         local1 = Local.objects.all()
 
-
-
         x=(Local.objects.latest('pk').pk)+1
-
-
-
-
-
 
         local = rec(1,x+1)
 
@@ -97,7 +90,6 @@ def locais_json(request):
             form.save()
         else:
             form = CommentForm();
-
 
         return JsonResponse(list(queryset), safe=False)
 
@@ -115,6 +107,13 @@ def post_restaurantemobile(request):
     return render (request, 'locais/restaurantemobile.html', {})
 def post_academiadescmobile(request):
     return render (request, 'locais/academiadescricaomobile.html', {})
+
+
+def post_adm(request, locais_post_id):
+    local = Local.objects.get(pk=locais_post_id)
+
+ 
+    return render (request, 'locais/academiadescricaomobile.html', {'local':local, 'form':form})
 
 
 
