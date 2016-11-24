@@ -29,7 +29,7 @@ def post_categorias(request):
 
 def locais_detalhes(request, locais_post_id):
     local = Local.objects.get(pk=locais_post_id)
-    
+
     if request.method == 'POST':
         form = CommentForm(request.POST)
         form.save()
@@ -45,12 +45,16 @@ def comment_locais(request):
         form = CommentForm();
     return render(request, 'locais/locais_descricao.html', {'form':form})
 
+def locais_categoria(request, locais_categoria):
+    locais = Local.objets.get(pk=locais_local_categoria)
+    return render (request, 'locais/categorias.html', {'locais':locais})
+
 
 def rec(n1,n2):
     locais=[]
     for i in range (n1,n2):
-        
-            
+
+
             try:
                 temp=Local.objects.get(pk=i)
                 local={}
@@ -62,7 +66,7 @@ def rec(n1,n2):
                 local["longitude"]=str(temp.position.longitude)
                 local["categorias"]=temp.categorias
                 local["imagem"]=temp.imagem
-                
+
                 locais.append(local)
             except (Exception):
                 rec(i+1,n2)
@@ -72,21 +76,21 @@ def rec(n1,n2):
 def locais_json(request):
 
         local1 = Local.objects.all()
-        
-        
+
+
 
         x=(Local.objects.latest('pk').pk)+1
 
-        
 
 
 
-        
+
+
         local = rec(1,x+1)
 
         queryset = Local.objects.values('pk', 'autor' ,'titulo_local','descricao', 'categorias','imagem')
 
-       
+
         if request.method == 'POST':
             form = CommentForm(request.POST)
             form.save()

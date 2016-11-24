@@ -1,0 +1,21 @@
+{% extends "../base.html" %}
+
+{% load staticfiles %}
+
+{% block section %}
+{% for local in locais %}
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <img id=box-image src="{{ local.get_image_url }}" alt="Logo Estabelecimento">
+      <div class="caption">
+        <h3>{{ local.titulo_local }}</h3>
+        <p>
+          <b>Categoria:</b>
+        </p>
+        <p>{{ local.categorias }}</p>
+        <p><a href="{% url 'detalhes' local.id %}" class="btn btn-primary" role="button">Visualizar</a></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% endblock %}
