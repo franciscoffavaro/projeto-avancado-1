@@ -53,10 +53,10 @@
       <div class="container-fluid" >
         <div class="row" >
 
-          <h2 id="h2" style="text-align: center;">Lista de Restaurantes</h2>
+          <h2 id="h2" style="text-align: center;">Lista de Bares, Restaurantes e Lanchonetes</h2>
 
           <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="Pesquisar por nome"/><br/>
-          <h1 ng-show="(locais | filter:criterioDeBusca).length == 0" style="text-align: center;">Desculpe, não há restaurantes cadastrados com este nome.</h1>
+          <h1 ng-show="(locais | filter:criterioDeBusca).length == 0" style="text-align: center;">Desculpe, não há bares, restaurantes ou lanchonetes cadastrados com este nome.</h1>
           {% verbatim %}
             <div ng-repeat="local in locais | filter:criterioDeBusca | filter:local.categoria='Restaurante'" >
             <div class="col-sm-6 col-md-4" >
