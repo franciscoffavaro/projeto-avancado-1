@@ -5,6 +5,11 @@ from django.contrib.auth.forms import UserCreationForm # Formulario de criacao d
 from django.contrib.auth.forms import AuthenticationForm # Formulario de autenticacao de usuarios
 from .models import *
 from .forms import *
+from django.core import serializers
+from django.http import HttpResponse
+from django.http import JsonResponse
+from geoposition.fields import GeopositionField
+
 
 def post_index(request):
     locais=Local.objects.all()
@@ -24,6 +29,7 @@ def post_categorias(request):
 
 def locais_detalhes(request, locais_post_id):
     local = Local.objects.get(pk=locais_post_id)
+    
     if request.method == 'POST':
         form = CommentForm(request.POST)
         form.save()
@@ -38,6 +44,69 @@ def comment_locais(request):
     else:
         form = CommentForm();
     return render(request, 'locais/locais_descricao.html', {'form':form})
+
+
+def rec(n1,n2):
+    locais=[]
+    for i in range (n1,n2):
+        
+            print(i)
+            try:
+                temp=Local.objects.get(pk=i)
+                local={}
+                local["pk"]=temp.pk
+                local["autor"]=temp.autor
+                local["titulo_local"]=temp.titulo_local
+                local["descricao"]=temp.descricao
+                local["latitude"]=str(temp.position.latitude)
+                local["longitude"]=str(temp.position.longitude)
+                local["categorias"]=temp.categorias
+                local["imagem"]=temp.imagem
+                
+                locais.append(local)
+            except (Exception):
+                rec(i+1,n2)
+    return (locais)
+
+
+def locais_json(request):
+
+        local1 = Local.objects.all()
+        teste = Local.objects.get(pk=3)
+        print(local1)
+
+        x=(len(local1))+1
+        
+        
+
+
+
+        
+        local = rec(1,x+1)
+
+        queryset = Local.objects.values('pk', 'autor' ,'titulo_local','descricao', 'categorias','imagem')
+
+       
+        if request.method == 'POST':
+            form = CommentForm(request.POST)
+            form.save()
+        else:
+            form = CommentForm();
+
+
+        return JsonResponse(list(queryset), safe=False)
+
+def post_academiasmobile(request):
+    return render (request, 'locais/academiamobile.html', {})
+def post_listaTelefonicaMobile(request):
+    return render (request, 'locais/listaTelefonicaMobile.html', {})
+def post_contatomobile(request):
+    return render (request, 'locais/contatomobile.html', {})
+def post_bancosmobile(request):
+    return render (request, 'locais/bancosmobile.html', {})
+def post_indexmobile(request):
+    return render (request, 'locais/indexmobile.html', {})
+
 
 
 
