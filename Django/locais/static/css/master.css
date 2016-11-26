@@ -445,10 +445,10 @@ footer h4{
 
 .geoposition-widget{
   text-align: center !important;
-  height: 50% !important;
-  width: 600px !important; 
-  position: relative !important; 
+  height: 60% !important;
+  width: 800px !important;
+  position: relative !important;
   overflow: hidden !important;
   margin: auto !important;
-
+  margin-right: 200px !important;
 }
