@@ -105,15 +105,10 @@ def post_indexmobile(request):
     return render (request, 'locais/indexmobile.html', {})
 def post_restaurantemobile(request):
     return render (request, 'locais/restaurantemobile.html', {})
-def post_academiadescmobile(request):
-    return render (request, 'locais/academiadescricaomobile.html', {})
+def post_academiadescmobile(request, locais_categoria):
+    print(locais_categoria)
+    return render (request, 'locais/academiadescricaomobile.html', {"localid": locais_categoria})
 
-
-def post_adm(request, locais_post_id):
-    local = Local.objects.get(pk=locais_post_id)
-
- 
-    return render (request, 'locais/academiadescricaomobile.html', {'local':local, 'form':form})
 
 
 

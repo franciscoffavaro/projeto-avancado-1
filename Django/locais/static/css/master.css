@@ -439,3 +439,16 @@ footer h4{
   color: rgb(99,93,93);
   margin: 0 3px 0 340px;
 }
+
+
+
+
+.geoposition-widget{
+  text-align: center !important;
+  height: 50% !important;
+  width: 600px !important; 
+  position: relative !important; 
+  overflow: hidden !important;
+  margin: auto !important;
+
+}

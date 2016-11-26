@@ -5,12 +5,11 @@
 <form action = "{% url 'new_local' %}" class="form-horizontal" method="post">
   {% csrf_token %}
   <fieldset style="display:flex;justify-content:center;flex-direction:column;margin-left:55mm;">
-
+    
   <!-- formulario cadastro -->
   <h2 style="display:flex;justify-content:center;margin-left:-35mm"><i class="fa fa-hashtag" aria-hidden="true">
-    <div class="container-fluid">
   </i>CadastrarEstabelecimento</h2>
-
+<div class="container-fluid">
   <!-- Autor da postagem de estabelecimentos-->
   <div class="form-group">
     {{ form.autor.errors}}
