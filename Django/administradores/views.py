@@ -59,7 +59,7 @@ def user_new(request):
 @login_required
 def local_new(request):
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILE)
+        form = PostForm(request.POST)
         form.save()
         return HttpResponseRedirect('/local/index/')
     else:

@@ -28,9 +28,9 @@
     </div>
     <script>
         $('#confirm-delete').on('show.bs.modal', function(e) {
-            $(this).find('.btn-ok').attr('id', $(e.relatedTarget).data('id'));
+            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
             console.log($(this).find('.btn-ok'));
-            $('.debug-url').html('Título do local: <strong>' + $(this).find('.btn-ok').attr('id') + '</strong>');
+            
 
         });
     </script>
@@ -53,7 +53,7 @@
                   <p>{{ local.categorias }}</p>
                   <a href="{% url 'edit_local' local.id %}" class="btn btn-primary" role="button">Editar</a>
                       
-                      <button data-id="{{local.titulo_local}}" class="btn btn-danger" data-href="{% url 'delete_local' local.id %}" data-toggle="modal" data-target="#confirm-delete">
+                      <button class="btn btn-danger" data-href="{% url 'delete_local' local.id %}" data-toggle="modal" data-target="#confirm-delete">
                           Deletar
                       </button>
 

@@ -84,8 +84,8 @@
                   <p id="p" style="text-align: center">{{local.descricao}}</p><br/><br/>
                 </div>
 
-
-                <form action="#" method="POST">
+{% endverbatim %}
+                <form action="/index_mobile" method="POST">
           <div class="row text-center" style="display: flex;
         justify-content: center">
 
@@ -93,7 +93,7 @@
 
             <div class="col-sm-6 col-md-6" >
             <a href="http://www.google.com/maps/place/{{local.latitude}},{{local.longitude}}" class="btn btn-default">Abrir no Google Maps</a><br><br>
-{% endverbatim %}
+
           <label for="comment">Como você avalia este estabelecimento?</label>
             <div class="estrelas" >
                     <input type="radio" id="cm_star-empty" name="fb" value="" checked/>

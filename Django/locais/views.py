@@ -102,16 +102,22 @@ def post_contatomobile(request):
 def post_bancosmobile(request):
     return render (request, 'locais/bancosmobile.html', {})
 def post_indexmobile(request):
-    return render (request, 'locais/indexmobile.html', {})
+    if request.method == 'POST':
+        form = CommentForm(request.POST, request.FILE)
+        form.save()
+        return HttpResponseRedirect('/local/index_mobile/')
+    else:
+        return render (request, 'locais/indexmobile.html', {})
 def post_restaurantemobile(request):
     return render (request, 'locais/restaurantemobile.html', {})
 def post_localdescmobile(request, locais_categoria):
-    print(locais_categoria)
-    return render (request, 'locais/locais_descricaoMobile.html', {"localid": locais_categoria})
+    if request.method == 'POST':
+        form = CommentForm(request.POST, request.FILE)
+        form.save()
+        return HttpResponseRedirect('/local/index_mobile/')
+    else:
+        form = CommentForm();
+        return render (request, 'locais/locais_descricaoMobile.html', {"localid": locais_categoria,'form':form})
 
 
 
-
-
-
-# Create your views here.
