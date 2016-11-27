@@ -73,32 +73,12 @@
 
           <h2 id="h2" style="text-align: center;"></h2>
               <div id="map"></div>
-<<<<<<< HEAD
 
 
           
           <dir class="container-fluid" style="margin: 35px;margin-top: 20px;">
           {% verbatim %}
             <div ng-repeat="local in locais " >
-=======
-    <script>
-      function initMap() {
-        var uluru = {lat: -6.805643, lng: -35.074629};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-            <h2 id="h2" style="text-align: center;">Estabelecimentos</h2>
-
-            {% verbatim %}
-            <div ng-repeat="local in locais" ng-controller  = "lobalCtrl">
->>>>>>> 3c155141f10806c38de077d0334814582be664c1
             <div class="col-sm-6 col-md-4" >
               <div class="thumbnail">
                 <img id=box-image src= alt="Logo Estabelecimento">
@@ -112,7 +92,7 @@
                   {% endverbatim %}
                   </dir>
       </section>
-
+      
       <!-- Api Javascript do Google Maps -->
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBKFsdF0ytgHPlW7I-cgnGkYfepeOOXio&callback=initMap"></script>
 <div ng-include="'{% static 'ajax/footer.html' %}'"></div>
