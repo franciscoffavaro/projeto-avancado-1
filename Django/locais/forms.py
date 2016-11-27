@@ -7,4 +7,4 @@ from locais.models import *
 class CommentForm(ModelForm):
     class Meta:
         model = Comment
-        fields=["nome", "comentario", "avaliacao"]
+        fields=["locais", "nome", "comentario", "avaliacao"]
