@@ -14,6 +14,7 @@
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/angular-messages.js' %}"></script>
     <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/maps.js' %}"></script>
     <style type="text/css">
     #map{
       height: 70%;
@@ -32,6 +33,29 @@
     <script>
       angular.module("indexmobile", ["ngMessages"]);
       angular.module("indexmobile").controller("indexmobileCtrl", function ($scope, uppercaseFilter){
+       $.getJSON('/local/json', function(data) {
+            console.log(data);
+            $scope.locais=data;
+        });
+
+
+
+        $scope.upMap = function(latitude,longitude) {
+                var uluru = {lat:parseFloat(latitude), lng:parseFloat(longitude)};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 14,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+                $('html,body').scrollTop(0);
+              }
+
+
+
+
       });
 
     </script>
@@ -49,35 +73,24 @@
 
           <h2 id="h2" style="text-align: center;"></h2>
               <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -6.805643, lng: -35.074629};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
 
-            {% verbatim %}
-            <div ng-repeat="local in locais | filter:criterioDeBusca | filter:local.categoria='Academia, Restaurantes e Lanchonetes'" >
+
+          
+          <dir class="container-fluid" style="margin: 35px;margin-top: 20px;">
+          {% verbatim %}
+            <div ng-repeat="local in locais " >
             <div class="col-sm-6 col-md-4" >
               <div class="thumbnail">
                 <img id=box-image src= alt="Logo Estabelecimento">
                   <div class="caption">
                     <h3 id="h3">{{local.titulo_local}}</h3>
                     <p id="p" style="text-align: justify">{{local.descricao}}</p>
-                    <p><a id="p" href= class="btn btn-primary" role="button">Visualizar</a></p>
-
-                  </div>
-                </div>
-              </div>
-              </div>
-              {% endverbatim %}
+                    
+                    <p><a id="p" href="/localdesc_mobile/{{local.pk}}" class="btn btn-primary" role="button">
+                    Ver detalhes</a></p>
+                    <p><a href="#" class="btn btn-primary" ng-click="upMap(local.latitude,local.longitude);" role="button">Ver no mapa</a></p>
+                  {% endverbatim %}
+                  </dir>
       </section>
       
       <!-- Api Javascript do Google Maps -->
