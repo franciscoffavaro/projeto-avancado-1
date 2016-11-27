@@ -85,45 +85,54 @@
                 </div>
 
 {% endverbatim %}
-                <form action="/index_mobile" method="POST">
-          <div class="row text-center" style="display: flex;
-        justify-content: center">
 
+{% block section %}
 
-
-            <div class="col-sm-6 col-md-6" >
-            <a href="http://www.google.com/maps/place/{{local.latitude}},{{local.longitude}}" class="btn btn-default">Abrir no Google Maps</a><br><br>
-
-          <label for="comment">Como você avalia este estabelecimento?</label>
-            <div class="estrelas" >
-                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                      <label for="cm_star-1"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                      <label for="cm_star-2"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                      <label for="cm_star-3"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                      <label for="cm_star-4"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                      <label for="cm_star-5"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                <form action="" method="POST" style="text-align:"> 
+                {% csrf_token %}
+                  <div class="form-group">
+                    {{ form.locais.errors}}
+                    <label class="col-md-4 control-label" for="Autor">Estabelecimento</label>
+                    
+                    {{ form.locais }}
+                    
+                  </div>
+                  <div class="form-group">
+                    {{ form.nome.errors}}
+                    <label class="col-md-4 control-label" for="Autor">Nome</label>
+                    
+                    {{ form.nome }}
+                    
+                  </div>
+                  <div class="form-group">
+                    {{ form.comentario.errors}}
+                    <label class="col-md-4 control-label" for="Autor">Comentario</label>
+                    
+                    {{ form.comentario }}
+                   
+                  </div>
+                  <div class="form-group">
+                    {{ form.avaliacao.errors}}
+                    <label class="col-md-4 control-label" for="Autor">Avaliação:</label>
+                    
+                    {{ form.avaliacao }}
+                   
                   </div>
 
-                <label for="comment">Deixe seu comentário:</label>
 
 
 
-                <textarea class="form-control" rows="5" id="mensagem" ></textarea>
-            </div>
-          </div>
-        <hr/>
-        <div id="actions" class="row">
+
 
           <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Enviar</button>
             <a href="#" class="btn btn-default">Cancelar</a>
         </div>
+
+
       </form>
+      {% endblock %}
+
               </div>
             </div>
             </div>

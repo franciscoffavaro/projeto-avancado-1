@@ -9,6 +9,7 @@ from django.core import serializers
 from django.http import HttpResponse
 from django.http import JsonResponse
 from geoposition.fields import GeopositionField
+from django.template import RequestContext
 
 
 def post_index(request):
@@ -103,21 +104,21 @@ def post_bancosmobile(request):
     return render (request, 'locais/bancosmobile.html', {})
 def post_indexmobile(request):
     if request.method == 'POST':
-        form = CommentForm(request.POST, request.FILE)
+        form = CommentForm(request.POST)
         form.save()
         return HttpResponseRedirect('/local/index_mobile/')
     else:
         return render (request, 'locais/indexmobile.html', {})
 def post_restaurantemobile(request):
     return render (request, 'locais/restaurantemobile.html', {})
-def post_localdescmobile(request, locais_categoria):
+def post_localdescmobile(request, local_id):
     if request.method == 'POST':
-        form = CommentForm(request.POST, request.FILE)
+        form = CommentForm(request.POST)
         form.save()
-        return HttpResponseRedirect('/local/index_mobile/')
+        return HttpResponseRedirect('/index_mobile/')
     else:
         form = CommentForm();
-        return render (request, 'locais/locais_descricaoMobile.html', {"localid": locais_categoria,'form':form})
+        return render (request, 'locais/locais_descricaoMobile.html', {"localid": local_id,'form':form})
 
 
 

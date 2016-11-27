@@ -11,8 +11,3 @@ class CommentForm(ModelForm):
 
 
 
-class CommentForm(forms.Form):
-    locais = forms.CharField(label='Login', max_length=50)
-    nome = forms.CharField(label='Senha', max_length=50)
-    comentario = forms.CharField(label='Senha', max_length=50)
-    avaliacao = forms.CharField(label='Senha', max_length=50)
