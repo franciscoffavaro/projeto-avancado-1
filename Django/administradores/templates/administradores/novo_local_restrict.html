@@ -4,11 +4,11 @@
 {% block section %}
 <form action = "{% url 'new_local' %}" class="form-horizontal" method="post">
   {% csrf_token %}
-  <fieldset style="display:flex;justify-content:center;flex-direction:column;margin-left:55mm;">
+  <fieldset style="display:flex;flex-direction:column;margin-left:30mm;margin-right:20mm;">
     
   <!-- formulario cadastro -->
   <h2 style="display:flex;justify-content:center;margin-left:-35mm"><i class="fa fa-hashtag" aria-hidden="true">
-  </i>CadastrarEstabelecimento</h2>
+  </i>Cadastrar novo estabelecimento</h2>
 <div class="container-fluid">
   <!-- Autor da postagem de estabelecimentos-->
   <div class="form-group">
@@ -18,6 +18,12 @@
     {{ form.autor }}
     </div>
   </div>
+
+
+
+
+
+
 
   <!-- Adicionar titulo do texto-->
   <div class="form-group">

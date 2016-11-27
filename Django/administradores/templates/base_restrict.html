@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
     <link rel="stylesheet" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}">
+
     <!--Dependência JQuery do bootstrap -->
     <script src="{% static 'lib/jquery/jquery.js' %}"></script>
   </head>
   <body>
     {% if user.is_active %}
-    <p style="display:flex;margin-left:258mm;margin-top:2mm;">
-      <b style="margin-rigth:10mm">Usuário Atual no Sistema: </b> <a href="">{{ user.username }}</a>
+    <p style="display:flex;margin-left:72%;margin-top:2mm;margin-right:20mm;">
+      <b style="margin-right:2mm">Usuário Atual no Sistema: </b> <a href="">{{ user.username }}</a>
       <a style="padding-left:6mm" href="{% url 'logout' %}">Logout</a>
     </p>
     {% endif %}

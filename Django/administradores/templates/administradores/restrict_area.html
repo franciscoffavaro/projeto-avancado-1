@@ -3,19 +3,60 @@
 
 
     {% block section %}
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Confirmar Remoção</h4>
+                </div>
+            
+                <div class="modal-body">
+                    <p>Você está para remover este local. A remoção é irreversível.</p>
+                    <p>Tem certeza que deseja continuar?</p>
+                    <p class="debug-url"></p>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-danger btn-ok">Deletar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#confirm-delete').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').attr('id', $(e.relatedTarget).data('id'));
+            console.log($(this).find('.btn-ok'));
+            $('.debug-url').html('Título do local: <strong>' + $(this).find('.btn-ok').attr('id') + '</strong>');
+
+        });
+    </script>
+
+
+
+
+
+
     <section id="singup_section">
       <div class="container-fluid">
         <div class="row">
           <h2>{{ local.categorias }}</h2>
           {% for local in locais %}
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4" style="text-align: center">
             <div class="thumbnail">
               <img id=box-image src="images/academiasesi.jpg" alt="Logo Estabelecimento">
                 <div class="caption">
                   <h3>{{ local.titulo_local }}</h3>
                   <p>{{ local.categorias }}</p>
-                  <p><a href="{% url 'edit_local' local.id %}" class="btn btn-primary" role="button">Editar</a></p>
-                  <p><a href="{% url 'delete_local' local.id %}" class="btn btn-primary" role="button">Deletar</a></p>
+                  <a href="{% url 'edit_local' local.id %}" class="btn btn-primary" role="button">Editar</a>
+                      
+                      <button data-id="{{local.titulo_local}}" class="btn btn-danger" data-href="{% url 'delete_local' local.id %}" data-toggle="modal" data-target="#confirm-delete">
+                          Deletar
+                      </button>
+
                 </div>
               </div>
             </div>

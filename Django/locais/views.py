@@ -66,11 +66,12 @@ def rec(n1,n2):
                 local["latitude"]=str(temp.position.latitude)
                 local["longitude"]=str(temp.position.longitude)
                 local["categorias"]=temp.categorias
-                local["imagem"]=temp.imagem
+                local["imagem"]=str(temp.imagem)
 
                 locais.append(local)
             except (Exception):
                 rec(i+1,n2)
+
     return (locais)
 
 
@@ -82,7 +83,6 @@ def locais_json(request):
 
         local = rec(1,x+1)
 
-        queryset = Local.objects.values('pk', 'autor' ,'titulo_local','descricao', 'categorias','imagem')
 
 
         if request.method == 'POST':
@@ -91,7 +91,7 @@ def locais_json(request):
         else:
             form = CommentForm();
 
-        return JsonResponse(list(queryset), safe=False)
+        return JsonResponse(list(local), safe=False)
 
 def post_academiasmobile(request):
     return render (request, 'locais/academiamobile.html', {})
@@ -105,9 +105,9 @@ def post_indexmobile(request):
     return render (request, 'locais/indexmobile.html', {})
 def post_restaurantemobile(request):
     return render (request, 'locais/restaurantemobile.html', {})
-def post_academiadescmobile(request, locais_categoria):
+def post_localdescmobile(request, locais_categoria):
     print(locais_categoria)
-    return render (request, 'locais/academiadescricaomobile.html', {"localid": locais_categoria})
+    return render (request, 'locais/locais_descricaoMobile.html', {"localid": locais_categoria})
 
 
 

@@ -32,6 +32,7 @@
             console.log(data);
             $scope.locais=data;
         });
+        
 
 
       });
@@ -66,13 +67,15 @@
                   <div class="caption">
                     <h3 id="h3">{{local.titulo_local}}</h3>
                     <p id="p" style="text-align: justify">{{local.descricao}}</p>
-                    <p><a id="p" href= class="btn btn-primary" role="button">Visualizar</a></p>
-
+                    
+                    <p><a id="p" href="/localdesc_mobile/{{local.pk}}" class="btn btn-primary" role="button">Visualizar</a></p>
+                  {% endverbatim %}
+                  {{localid}}
                   </div>
                 </div>
               </div>
               </div>
-              {% endverbatim %}
+              
       </section>
 
 </div>

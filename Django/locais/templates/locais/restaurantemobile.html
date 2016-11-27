@@ -58,14 +58,15 @@
           <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="Pesquisar por nome"/><br/>
           <h1 ng-show="(locais | filter:criterioDeBusca).length == 0" style="text-align: center;">Desculpe, não há bares, restaurantes ou lanchonetes cadastrados com este nome.</h1>
           {% verbatim %}
-            <div ng-repeat="local in locais | filter:criterioDeBusca | filter:local.categoria='Restaurante'" >
+            <div ng-repeat="local in locais | filter:criterioDeBusca | filter:local.categoria='BRL'" >
             <div class="col-sm-6 col-md-4" >
               <div class="thumbnail">
                 <img id=box-image src= alt="Logo Estabelecimento">
                   <div class="caption">
                     <h3 id="h3">{{local.titulo_local}}</h3>
                     <p id="p" style="text-align: justify">{{local.descricao}}</p>
-                    <p><a id="p" href= class="btn btn-primary" role="button">Visualizar</a></p>
+                    <p><a id="p" href="/localdesc_mobile/{{local.pk}}" class="btn btn-primary" role="button">Visualizar</a></p>
+
 
                   </div>
                 </div>
@@ -80,4 +81,4 @@
 <div ng-include="'{% static 'ajax/footer.html' %}'"></div>
 </body>
 </html>
-s
+

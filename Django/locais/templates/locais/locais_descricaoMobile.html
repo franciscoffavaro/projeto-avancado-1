@@ -1,7 +1,7 @@
 {% load staticfiles %}
 
 
-<html lang="pt-br" ng-app="academiadescmobile">
+<html lang="pt-br" ng-app="localdescmobile">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,14 +42,27 @@
 
 
     <script>
-      angular.module("academiadescmobile", ["ngMessages"]);
-      angular.module("academiadescmobile").controller("academiadescmobileCtrl", function ($scope, uppercaseFilter){
+      angular.module("localdescmobile", ["ngMessages"]);
+      angular.module("localdescmobile").controller("localdescmobileCtrl", function ($scope, uppercaseFilter){
+         $.getJSON('/local/json', function(data) {
+            console.log(data);
+            $scope.locais=data;
+            $scope.id={{localid}};
+            $scope.local=$.grep($scope.locais, function(e){ return e.pk == $scope.id; });
+            $scope.local=$scope.local[0];
+            console.log($scope.local);
+
+
+          });
+
+         
+
       });
 
     </script>
 
 </head>
-<body ng-controller="academiadescmobileCtrl">
+<body ng-controller="localdescmobileCtrl">
 
 
 <div class="container">
@@ -57,26 +70,29 @@
     <section id="singup_section">
       <div class="container-fluid" >
         <div class="row" >
-
-          <h2 id="h2" style="text-align: center;">{{academia.nome}}</h2>
+{% verbatim %}
+          <h2 id="h2" style="text-align: center;">{{local.titulo_local}}</h2>
 
           <div class="col-sm-12 col-md-12" >
             <div class="thumbnail">
-              <img id=box-image src={{academia.logo}} alt="Logo Estabelecimento">
+              <img id=box-image src={{local.imagem}} alt="Logo Estabelecimento">
                 <div class="caption">
 
-                  <p id="p" style="text-align: justify">{{academia.desclonga}}</p>
-                  <h3 class="text-center">Nosso Objetivo:</h3>
-                  <p id="p" style="text-align: justify">{{academia.objetivo}}</p>
+                  
+                  <h3 class="text-center">Descrição:</h3>
+                  <p id="p" style="text-align: center">{{local.descricao}}</p><br/><br/>
                 </div>
 
-{{localid}}
+
                 <form action="#" method="POST">
           <div class="row text-center" style="display: flex;
         justify-content: center">
 
 
+            
             <div class="col-sm-6 col-md-6" >
+            <a href="http://www.google.com/maps/place/{{local.latitude}},{{local.longitude}}" class="btn btn-default">Abrir no Google Maps</a><br><br>
+{% endverbatim %}
           <label for="comment">Como você avalia este estabelecimento?</label>
             <div class="estrelas" >
                     <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
@@ -103,7 +119,7 @@
         <div id="actions" class="row">
 
           <div class="col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
             <a href="#" class="btn btn-default">Cancelar</a>
         </div>
       </form>

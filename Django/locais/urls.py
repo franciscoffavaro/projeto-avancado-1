@@ -11,12 +11,12 @@ urlpatterns = [
 
     url(r'^local/json', views.locais_json, name='json'),
     url(r'^index_mobile/', views.post_indexmobile, name='indexmobile'),
-    url(r'^academias_mobile/', views.post_academiasmobile, name='academias'),
+    url(r'^academias_mobile/', views.post_academiasmobile, name='academiamobile'),
     url(r'^telefones_uteis_mobile/', views.post_listaTelefonicaMobile, name='tel'),
     url(r'^contato_mobile/', views.post_contatomobile, name='contato_mobile'),
     url(r'^bancos_mobile/', views.post_bancosmobile, name='bancos_mobile'),
     url(r'^restaurante_mobile/', views.post_restaurantemobile, name='restaurante_mobile'),
-    url(r'^academiadesc_mobile/(?P<locais_categoria>[0-9]+)/$', views.post_academiadescmobile, name='restaurante_mobile'),
+    url(r'^localdesc_mobile/(?P<locais_categoria>[0-9]+)/$', views.post_localdescmobile, name='restaurante_mobile'),
 
 
 ]
