@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from geoposition.fields import GeopositionField
-
+from geoposition import Geoposition
 class Local(models.Model):
     Academias='Academia'
     Bancos='Bancos'
@@ -23,7 +23,7 @@ class Local(models.Model):
     titulo_local = models.CharField(max_length=200)
     descricao = models.TextField()
     categorias = models.CharField(max_length=40, choices=CHOICE_CATEGORIAS)
-    position = GeopositionField(verbose_name=u'Geolocalização', help_text="Não altere os valores calculados automaticamente de latitude e longitude")
+    position = GeopositionField(default=u'-6.8078347, -35.07674689999999',verbose_name=u'Geolocalização', help_text="Não altere os valores calculados automaticamente de latitude e longitude")
     imagem = models.ImageField(upload_to = "locais/static/images/postagem", blank=True)
 
     def __str__(self):
