@@ -13,20 +13,20 @@
             <div class="col-sm-12 col-md-9">
               <div class="thumbnail" id="formContato">
                 <div class="caption">
-                  <form name="formulario" action="" method="post">
+                  <form name="formulario" action="" method="post">  {% csrf_token %}
 
-                    <input type=hidden name="destino" value="">
-                    <input type=hidden name="enviado" value="">
                     <p><b>Nome:</b><br>
-                    <input type=text name="nome" size="42"></p><br>
+                    {{ form.nome }}
                     <p><b>Email:</b><br>
-                    <input type=text name="email" size="42"></p><br>
-                    <p><b>Assunto:</b><br>
-                    <input type=text name="assunto" size="42"></p><br>
+                    {{ form.email }}
                     <p><b>Mensagem:</b><br>
-                    <textarea name="Mensagem" rows="10" cols="42" wrap="virtual"></textarea></p><br>
+                    {{ form.mensagem }}
                     <p>
                     <button type="submit" class="btn btn-success">Enviar</button>
+                    <script>
+                      alert('{{ message }}');
+                    </script>
+
                     <button type="reset" class="btn btn-warning">Limpar Formulário</button>
                     </p>
                   </form>

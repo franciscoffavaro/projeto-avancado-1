@@ -34,6 +34,15 @@ GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyCBKFsdF0ytgHPlW7I-cgnGkYfepeOOXio'
 
 # Application definition
 
+# Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'Time Guia RT <timeguiart@gmail.com>'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'timeguiart@gmail.com'
+EMAIL_HOST_PASSWORD = 'A05011990'
+EMAIL_PORT = 587
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

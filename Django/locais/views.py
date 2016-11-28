@@ -10,6 +10,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from geoposition.fields import GeopositionField
 from django.template import RequestContext
+from django.core.mail import send_mail
 
 
 def post_index(request):
@@ -23,7 +24,18 @@ def post_telefonesUteis(request):
     return render(request, 'locais/listaTelefonesUteis.html', {})
 
 def post_contato(request):
-    return render(request, 'locais/contato.html', {})
+    if request.method == 'POST':
+        form = Contactform(request.POST)
+        if form.is_valid:
+            nome = request.POST.get('nome', '')
+            email = request.POST.get('email','')
+            mensagem = request.POST.get('mensagem','')
+            send_mail(email, mensagem, email, ['timeguiart@gmail.com'])
+            HttpResponse("Email enviado")
+            form = Contactform();
+    else:
+        form = Contactform();
+    return render(request, 'locais/contato.html', {'form':form})
 
 def post_categorias(request):
     return render (request, 'locais/lista_locais.html', {})

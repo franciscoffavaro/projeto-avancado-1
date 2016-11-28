@@ -21,7 +21,10 @@ class CommentForm(ModelForm):
             'avaliacao': Select(choices=CHOICES),
         }
 
-
+class Contactform(ModelForm):
+    class Meta:
+        model = Contact
+        fields=["nome", "email", "mensagem"]
 #class UserForm(forms.Form):
 #    login = forms.CharField(label='Login', max_length=50)
 #    senha = forms.CharField(label='Senha', max_length=50, widget=forms.PasswordInput())
