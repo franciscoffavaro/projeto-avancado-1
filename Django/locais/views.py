@@ -56,7 +56,6 @@ def rec(n1,n2):
     locais=[]
     for i in range (n1,n2):
 
-
             try:
                 temp=Local.objects.get(pk=i)
                 local={}
@@ -84,8 +83,6 @@ def locais_json(request):
 
         local = rec(1,x+1)
 
-
-
         if request.method == 'POST':
             form = CommentForm(request.POST)
             form.save()
@@ -93,6 +90,18 @@ def locais_json(request):
             form = CommentForm();
 
         return JsonResponse(list(local), safe=False)
+
+def comentarios_json(request):
+
+        queryset = Comment.objects.values('pk','locais', 'nome','comentario','avaliacao')
+
+        if request.method == 'POST':
+            form = CommentForm(request.POST)
+            form.save()
+        else:
+            form = CommentForm();
+
+        return JsonResponse(list(queryset), safe=False)
 
 def post_academiasmobile(request):
     return render (request, 'locais/academiamobile.html', {})
@@ -119,6 +128,3 @@ def post_localdescmobile(request, local_id):
     else:
         form = CommentForm();
         return render (request, 'locais/locais_descricaoMobile.html', {"localid": local_id,'form':form})
-
-
-

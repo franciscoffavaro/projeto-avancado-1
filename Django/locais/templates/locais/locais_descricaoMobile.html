@@ -45,15 +45,34 @@
       angular.module("localdescmobile", ["ngMessages"]);
       angular.module("localdescmobile").controller("localdescmobileCtrl", function ($scope, uppercaseFilter){
          $.getJSON('/local/json', function(data) {
-            console.log(data);
+
             $scope.locais=data;
             $scope.id={{localid}};
             $scope.local=$.grep($scope.locais, function(e){ return e.pk == $scope.id; });
             $scope.local=$scope.local[0];
-            console.log($scope.local);
+
 
 
           });
+          $.getJSON('/local/comjson', function(data2) {
+             console.log(data2);
+             $scope.comentarios=data2;
+             var x=0;
+             var contador=0;
+             for (var prop in data2) {
+               if(data2[prop].locais==3){var x = x+(data2[prop].avaliacao);contador++;}
+
+              console.log("obj." + prop + " = " + data2[prop].avaliacao);
+              console.log(x);
+
+              }
+              $scope.md=(x/contador);
+                console.log($scope.md);
+
+
+
+
+           });
 
 
 
@@ -80,43 +99,45 @@
                 <div class="caption">
 
 
-                  <h3 class="text-center">Descrição:</h3>
+                  <h3 class="text-center"> Descrição:</h3>
                   <p id="p" style="text-align: center">{{local.descricao}}</p><br/><br/>
+                  <h4 style="text-align: center; "> Média de Avaliações: {{md}} </h4>
                 </div>
+
 
 {% endverbatim %}
 
 {% block section %}
 
-                <form action="" method="POST" style="text-align:"> 
+                <form action="" method="POST" style="text-align:">
                 {% csrf_token %}
                   <div class="form-group">
                     {{ form.locais.errors}}
                     <label class="col-md-4 control-label" for="Autor">Estabelecimento</label>
-                    
+
                     {{ form.locais }}
-                    
+
                   </div>
                   <div class="form-group">
                     {{ form.nome.errors}}
                     <label class="col-md-4 control-label" for="Autor">Nome</label>
-                    
+
                     {{ form.nome }}
-                    
+
                   </div>
                   <div class="form-group">
                     {{ form.comentario.errors}}
                     <label class="col-md-4 control-label" for="Autor">Comentario</label>
-                    
+
                     {{ form.comentario }}
-                   
+
                   </div>
                   <div class="form-group">
                     {{ form.avaliacao.errors}}
                     <label class="col-md-4 control-label" for="Autor">Avaliação:</label>
-                    
+
                     {{ form.avaliacao }}
-                   
+
                   </div>
 
 
